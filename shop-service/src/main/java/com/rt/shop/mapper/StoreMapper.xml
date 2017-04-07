@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.StoreMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, card_approve, realstore_approve, store_address, store_credit, store_info, store_msn, store_name, store_ower, store_ower_card, store_qq, store_recommend, store_recommend_time, store_seo_description, store_seo_keywords, store_status, store_telephone, store_zip, template, validity, violation_reseaon, area_id, card_id, grade_id, sc_id, store_banner_id, store_license_id, store_logo_id, update_grade_id, domain_modify_count, store_second_domain, favorite_count, store_lat, store_lng, store_ww, map_type, delivery_begin_time, delivery_end_time, combin_begin_time, combin_end_time, weixin_begin_time, weixin_end_time, weixin_status, weixin_appId, weixin_appSecret, weixin_token, weixin_welecome_content, weixin_qr_img_id, weixin_account, store_weixin_logo_id, weixin_store_name
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

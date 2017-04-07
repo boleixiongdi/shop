@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-wap-web-app-capable" content="yes">
+    <meta name="apple-wap-web-app-status-bar-style" content="black-translucent">
+    <title>$!config.title</title>
+    <link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="main">
+
+    <div class="phone_hd">
+        <a class="back" href="javascript:history.go(-1);"><img
+                src="$!webPath/resources/style/system/front/wap/images/back.png" width="25" height="25"></a>
+        收藏店铺
+        <a class="menu home" href="$!webPath/wap/index.htm"><img
+                src="$!webPath/resources/style/system/front/wap/images/home.png" width="25" height="25"></a>
+    </div>
+
+    <div class="mt50"></div>
+    <div class="rx-group_list">
+    	#foreach($obj in $objs)
+        <dl class="clearfix">
+            <dt>
+            	#if($!obj.store.store_logo)
+                <a href="$!webPath/store_$!{obj.store.id}.htm?parameter=recommend"><img src="$!webPath/$!{obj.store.store_logo.path}/$!{obj.store.store_logo.name}" width="60" height="60"></a>
+            	#else
+            	<a href="$!webPath/store_$!{obj.store.id}.htm?parameter=recommend"><img src="$!webPath/$!config.storeImage.path/$!config.storeImage.name" width="60" height="60"></a>
+            	#end
+            </dt>
+            <dd>
+                <span><a href="$!webPath/store_$!{obj.store.id}.htm?parameter=recommend">$!obj.store.store_name</a> </span>
+                <span>
+                    <img src="$!webPath/resources/style/common/images/level_-1.gif">
+                </span>
+            </dd>
+            <dd class="cancel-store-fav"><a href="$!webPath/buyer/favorite_del.htm?mulitId=$!obj.id&currentPage=$!currentPage&type=1">取消收藏</a></dd>
+        </dl>
+        #end
+    </div>
+
+</div>
+
+<script>
+    //取消收藏
+    $(".cancel-store-fav").on('click', function () {
+        $(this).parents('dl').remove();
+        jQuery.post('test.html', {id: 23}, function (data) {
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- ueditor所需引入 -->
+@layout("/layout/ueditor.html"){}
+<div class="layer">
+	<form name="FormPost" id="product-save" class="FormGrid"  method="post"
+		action="${ctxPath}/product/save">
+		
+		<input type="hidden" value="${product.id!}" name="id"/>
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+			<tr class="FormData">
+			<td class="CaptionTD">标题</td>
+			<td class="DataTD width-100"><input type="text" name="title" datatype="*"
+			nullmsg="请输入title！" value="${product.title!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">标签</td>
+			<td class="DataTD width-100"><input type="text" name="tag" datatype="*"
+			nullmsg="请输入tag！" value="${product.tag!}"></td>
+		</tr>
+	
+		
+		<tr class="FormData">
+			<td class="CaptionTD">类型</td>
+			<td class="DataTD width-100">
+			@var typeList = selectUtil.getProductType();
+			  	<#select name="type">
+						@for(item in typeList){
+							<option value="${item.id!}" ${decode(item.id,product.type!,"selected","")}>
+							${item.name!}
+							</option>
+						@}
+			   </#select>
+			   </td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">图片</td>
+			<td class="DataTD width-100"><input type="text" name="img" datatype="*"
+			nullmsg="请输入img！" value="${product.img!}"></td>
+		</tr>
+		<tr class="FormData">
+					<td class="CaptionTD">内容</td>
+					<td><textarea  style="width:93%;height:290px" name="remark" id="remark">${product.remark!}</textarea></td>
+				
+				<input type="hidden" name="contentNoTag" id="contentNoTag" />
+				<input type="hidden" name="summary" id="summary" />
+
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>
+
+
+<script type="text/javascript">
+
+function backValue(){
+	var content=UE.getEditor('remark').getContent();
+	var contentNoTag=UE.getEditor('remark').getContentTxt();
+	var summary=UE.getEditor('remark').getContentTxt().substr(0,155);
+
+	$("#content").val(content);
+	$("#contentNoTag").val(contentNoTag);
+	$("#summary").val(summary);
+}
+function reurl(){ 
+	UE.getEditor('remark');
+} 
+setTimeout('reurl()',500); 	
+</script>
+<#save formId="product-save" />

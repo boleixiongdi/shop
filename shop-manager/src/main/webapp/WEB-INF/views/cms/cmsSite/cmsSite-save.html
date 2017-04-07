@@ -1,0 +1,65 @@
+<div class="layer">
+	<form name="FormPost" id="cmsSite-save" class="FormGrid"  method="post"
+		action="${ctxPath}/cmsSite/save">
+		
+		<input type="hidden" value="${cmsSite.id!}" name="id"/>
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+								<tr class="FormData">
+			<td class="CaptionTD">版权</td>
+			<td class="DataTD width-100"><input type="text" name="copyright" datatype="*"
+			nullmsg="请输入版权！" value="${cmsSite.copyright!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">描述</td>
+			<td class="DataTD width-100"><input type="text" name="description" datatype="*"
+			nullmsg="请输入描述！" value="${cmsSite.description!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">关键字</td>
+			<td class="DataTD width-100"><input type="text" name="keywords" datatype="*"
+			nullmsg="请输入关键字！" value="${cmsSite.keywords!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">logo</td>
+			<td class="DataTD width-100"><input type="text" name="logo" datatype="*"
+			nullmsg="请输入logo！" value="${cmsSite.logo!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">名称</td>
+			<td class="DataTD width-100"><input type="text" name="name" datatype="*"
+			nullmsg="请输入名称！" value="${cmsSite.name!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">主题</td>
+			<td class="DataTD width-100"><input type="text" name="theme" datatype="*"
+			nullmsg="请输入主题！" value="${cmsSite.theme!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">标题</td>
+			<td class="DataTD width-100"><input type="text" name="title" datatype="*"
+			nullmsg="请输入标题！" value="${cmsSite.title!}"></td>
+		</tr>
+
+				<!-- <tr class="FormData">
+					<td class="CaptionTD">描述</td>
+					<td class="DataTD">
+						<textarea name="description" class="autosize-transition form-control "
+						style="resize: none;">${cmsSite.description!}</textarea>	
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+	</form>
+</div>
+<#save formId="cmsSite-save" />
+
+<script type="text/javascript">
+
+//描述框自动扩张高度
+$('textarea[class*=autosize]').autosize({append: "\n"});
+
+</script>

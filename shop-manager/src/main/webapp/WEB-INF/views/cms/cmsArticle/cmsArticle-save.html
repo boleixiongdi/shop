@@ -1,0 +1,67 @@
+<!-- ueditor所需引入 -->
+@layout("/layout/ueditor.html"){}
+<div class="layer">
+	<form name="FormPost" id="cmsArticle-save" class="FormGrid"  method="post"
+		action="${ctxPath}/cmsArticle/save">
+		
+		<input type="hidden" value="${cmsArticle.id!}" name="id"/>
+		<input type="hidden" value="${pCmsArticle.parentIds!}" name="parentIds" />
+		<input type="hidden" value="${cmsArticle.parentIds!}" name="oldParentIds" />
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+		
+		<tr class="FormData">
+			<td class="CaptionTD">标题</td>
+			<td class="DataTD width-100 "><input type="text" name="title" datatype="*"
+			nullmsg="请输入标题！" value="${cmsArticle.title!}"></td>
+		</tr>
+		<tr class="FormData">
+					<td class="CaptionTD">上级栏目</td>
+					<td class="DataTD">
+					<#treeselect url="cmsCategory/tree" modelId="categoryId" modelNameValue="${pCmsCategory.name!}" 
+							modelIdValue="${pCmsCategory.id!0}" selectIds="${pCmsCategory.id!}"
+							curId="${cmsArticle.id!}" />
+					</td>
+				</tr>
+		
+		
+		<tr class="FormData">
+			<td class="CaptionTD">关键字</td>
+			<td class="DataTD width-100 tags"><input type="text" name="keywords"  value="${cmsArticle.keywords!}"></td>
+		</tr>
+		
+		<tr class="FormData">
+			<td class="CaptionTD">权重</td>
+			<td class="DataTD width-100"><input type="text" name="weight" datatype="*"
+			nullmsg="请输入权重！" value="${cmsArticle.weight!}"></td>
+		</tr>
+		<tr class="FormData">
+					<td class="CaptionTD">描述</td>
+					<td class="DataTD">
+						<textarea name="description" class="autosize-transition form-control "
+						style="resize: none;">${cmsArticle.description!}</textarea>	
+					</td>
+				</tr> 
+
+		<tr class="FormData">
+					<td class="CaptionTD">内容</td>
+				
+		<td><script id="ueditor" type="text/plain" name="content" style="width:524px;height:300px;">${cmsArticle.content!}</script></td>
+		</tr>
+				 
+			</tbody>
+		</table>
+	</form>
+</div>
+<#save formId="cmsArticle-save" />
+
+<script type="text/javascript">
+UE.getEditor('ueditor');
+$('.tags').tagsInput();
+//描述框自动扩张高度
+$('textarea[class*=autosize]').autosize({append: "\n"});
+
+</script>

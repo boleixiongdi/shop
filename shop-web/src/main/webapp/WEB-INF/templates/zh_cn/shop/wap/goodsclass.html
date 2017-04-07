@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-wap-web-app-capable" content="yes">
+    <meta name="apple-wap-web-app-status-bar-style"
+          content="black-translucent">
+    <title>$!config.title</title>
+    <link rel="stylesheet" href="$!webPath/resources/style/system/front/wap/css/bootstrap.css">
+    <link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+    <script src="$!webPath/resources/style/system/front/wap/js/iscroll.js"></script>
+    <script>
+
+        $(function () {
+            //菜单框架自动获取高度
+            var doc_H = $(document).height();
+            $('.rx_menu_box').height(doc_H);
+            window.onresize = function () {
+                var doc_H = $(document).height();
+                $('.rx_menu_box').height(doc_H);
+            }
+        });
+
+        var myScroll_left;
+        var myScroll_right;
+        function loaded() {
+            myScroll_left = new IScroll('#rx_left_Menu', {mouseWheel: true, click: true});
+            myScroll_right = new IScroll('#rx_right_Menu', {mouseWheel: true, click: true});
+        }
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, false);
+
+    </script>
+</head>
+
+<body class="index_bg" onLoad="loaded()">
+
+<div class="phone_hd">
+    <a class="back pull-left" href="$!webPath/wap/index.htm">
+        <img src="$!webPath/resources/style/system/front/wap/images/back.png" width="25" height="25"></a>
+    商品分类
+    <a class="menu home" href="$!webPath/wap/index.htm">
+        <img src="$!webPath/resources/style/system/front/wap/images/home.png" width="25" height="25"></a>
+</div>
+
+<div class="category">
+
+
+    <!--菜单-->
+    <div class="rx_menu_box">
+        <!---------左侧菜单---------->
+        <div id="rx_left_Menu">
+            <div class="rx-cate-menu" id="rx-scroller">
+                <ul>
+                    #foreach($gc in $!gcs)
+                    #if($gcId == $gc.id)
+                    <li class="active"><a href="javascript:void(0)">$gc.className</a></li>
+                    #else
+                    <li class=""><a href="$!webPath/goodsclass.htm?gcId=$!gc.id">$gc.className</a></li>
+                    #end
+                    #end
+                </ul>
+            </div>
+        </div>
+
+        <!---------右侧侧菜单---------->
+        <div id="rx_right_Menu" class="rx-mainInfo">
+            <div class="rxMenuType" style="display:block" id="rx-scroller2">
+                #foreach($gc2 in $gcs2)
+                <h2>$gc2.className</h2>
+                <div class="rxMenuType-item clearfix">
+                    #foreach($gc3 in $gc2.childs)
+                    <a href="$!webPath/store_goods_list_$!{gc3.id}.htm">$!gc3.className</a>
+                    #end
+                </div>
+                #end
+            </div>
+        </div>
+
+    </div>
+    <!--菜单end-->
+
+
+</div>
+
+$!httpInclude.include("/footer.htm")
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.AdvertMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, ad_begin_time, ad_click_num, ad_end_time, ad_gold, ad_slide_sequence, ad_status, ad_text, ad_title, ad_url, ad_acc_id, ad_ap_id, ad_user_id
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

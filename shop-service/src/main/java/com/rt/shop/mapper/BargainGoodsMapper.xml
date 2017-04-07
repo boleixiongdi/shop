@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.BargainGoodsMapper">
+	
+	  <cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, bg_price, bg_status, bg_time, bg_admin_user_id, bg_goods_id, bg_count, bg_rebate, audit_time
+	</sql>
+
+    <select id="selectBargainGoodsPage" resultType="com.rt.shop.entity.BargainGoods">
+		select g.* from shopping_bargain_goods bg LEFT JOIN shopping_goods g
+        on bg.bg_goods_id=g.id
+        <where>
+			<if test="bg_time != null and bg_time != ''">
+				bg.bg_time =#{bg_time}
+			</if>
+			<if test="bg_status !=null and bg_status != ''">
+				and bg.bg_status =#{bg_status}
+			</if>
+			
+		</where>
+	</select>
+</mapper>

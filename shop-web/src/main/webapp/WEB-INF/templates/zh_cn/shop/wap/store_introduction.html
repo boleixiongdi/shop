@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>$!config.title</title>
+    <link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+    <link href="$!webPath/resources/style/system/front/wap/css/sweetalert.css" rel="stylesheet" type="text/css">
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery.lazyload.js"></script>
+    <script src="$!webPath/resources/style/system/front/wap/js/sweetalert.min.js"></script>
+</head>
+<body>
+
+<div class="phone_main">
+
+    <div class="phone_hd">
+        <a class="back" href="javascript:history.go(-1);"><img
+                src="$!webPath/resources/style/system/front/wap/images/back.png" width="25" height="25"></a>
+        店铺简介
+    </div>
+
+    <div class="main">
+        <div class="allgoods">
+            <div class="mt50"></div>
+
+            <div class="shop_msg_box rx_store_user">
+
+                <span class="collect_wrap">
+                    <a href="javascript:void(0);" class="details_star" store_id="$!{store.id}">
+                        #if($!fsstatus == 0)
+                        <img src="$!webPath/resources/style/system/front/wap/images/star_bg.png" mark="0">
+                        #elseif($!fsstatus == 1)
+                        <img src="$!webPath/resources/style/system/front/wap/images/star_bg_light.png" mark="0">
+                        #end
+                    </a>
+                    <a href="javascript:void(0);">$!{store.favorite_count}人收藏</a>
+				</span>
+
+                <dl class="shopvdl_wrap clearfix">
+                    <dt>
+                        <span>
+                            <a href="$!webPath/store_introduction.htm">
+                            	#if($!store.store_logo)
+                            	<img src="$!webPath/$!{store.store_logo.path}/$!{store.store_logo.name}" width="60" height="60">
+                            	#else
+                            	<img src="$!webPath/$!config.storeImage.path/$!config.storeImage.name" width="60" height="60">
+                            	#end
+                            </a>
+                        </span>
+                    </dt>
+                    <dd>
+                        <span><a href="$!webPath/store_introduction.htm">${store.store_name}</a></span>
+                        <span>
+				        #set($credit=$!storeViewTools.generic_store_credit("$!store.id"))
+				        <img src="$!imageWebServer/resources/style/common/images/level_0.gif">
+				        #if($credit<10 && $credit>0)
+				        #set($credit=${credit} / 2)
+				        #set($credit=$credit+1)
+				        #end
+				        #if($credit>=20)
+				        <img src="$!imageWebServer/resources/style/common/images/level_2.gif">
+				        #set($credit=($credit - 20)/2)
+				        #set($credit=$credit+1)
+				        #end
+				        #if($credit>=10)
+				        <img src="$!imageWebServer/resources/style/common/images/level_1.gif">
+				        #set($credit=($credit - 10)/2)
+				        #set($credit=$credit+1)
+				        #end
+				        #if($credit>5)#set($credit=5)#end
+                            <!-- <img src="$!webPath/resources/style/common/images/level_-1.gif"> -->
+                        </span>
+                        #set($store_evaluate1="$!CommUtil.mul($!{store.point.store_evaluate1},100)%")
+                        <span class="hui2">好评率：${store_evaluate1}</span>
+                    </dd>
+                </dl>
+                <ul class="shop_movepj">
+                    <li><i>描述相符：</i><b>$!{store.point.description_evaluate}</b><em class="better"><strong>$!description_type</strong>$!description_result</em></li>
+                    <li><i>服务态度：</i><b>$!{store.point.service_evaluate}</b><em class="better"><strong>$!service_type</strong>$!service_result</em></li>
+                    <li><i>发货速度：</i><b>$!{store.point.ship_evaluate}</b><em class="better"><strong>$!ship_type</strong>$!ship_result</em></li>
+                </ul>
+            </div>
+
+
+            <!--卖家信息-->
+            <div class="rx-store-list">
+                <a href="#" class="rx-item">
+                    <i class="fa fa-comment" aria-hidden="true"></i>
+                    <span>联系卖家</span>
+                </a>
+                <a href="tel:400-1234567" class="rx-item">
+                    <i class="fa fa-phone"></i>
+                    <span>商家电话 $!{store.store_telephone}</span>
+                </a>
+            </div>
+
+
+            <!--卖家信息-->
+            <div class="phone_floor">
+                <div class="rx-store-info">
+                    <p>店铺简介</p>
+                    <p>公司名称: $!store.store_name</p>
+                    <p>所在地区: $!areaViewTools.generic_area_info("$!store.area.id")</p>
+                    <p>开店时间: $!CommUtil.formatShortDate($!store.addTime)</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    $!httpInclude.include("/footer.htm")
+
+    <script>
+        jQuery(function () {
+            jQuery(".details_star").on('click',function () {
+                var _this = jQuery(this);
+                var store_id = $(this).attr('store_id');
+                jQuery.getJSON('$!webPath/wap/add_store_favorite.htm',{id:store_id},function (data) {
+                    if (data.ret){
+                        swal({
+                            title: "已收藏",
+                            type: "warning",
+                            timer: 1000,
+                            showConfirmButton: false
+                        });
+                    }else{
+                        _this.find('img').attr('src','$!webPath/resources/style/system/front/wap/images/star_bg_light.png')
+                        swal({
+                            title: "收藏成功",
+                            type: "success",
+                            timer: 1000,
+                            showConfirmButton: false
+                        });
+                    }
+                })
+            })
+        })
+    </script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.OrderformMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, finishTime, goods_amount, invoice, invoiceType, msg, order_id, order_status, payTime, pay_msg, refund, refund_type, shipCode, shipTime, ship_price, totalPrice, addr_id, payment_id, store_id, user_id, auto_confirm_email, auto_confirm_sms, transport, out_order_id, ec_id, ci_id, order_seller_intro, return_shipCode, return_ec_id, return_content, return_shipTime, order_type
+	</sql>
+
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+	<select id="selectSumPriceByUserId" resultType="com.rt.shop.entity.OrderForm" parameterType="com.rt.shop.entity.OrderForm">
+		select obj.user_id,sum(obj.totalPrice) totalPrice from shopping_orderform obj where obj.order_status>=#{order_status} group by obj.user_id
+	</select>
+	
+	
+</mapper>

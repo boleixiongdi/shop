@@ -1,0 +1,71 @@
+!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-wap-web-app-capable" content="yes">
+    <meta name="apple-wap-web-app-status-bar-style" content="black-translucent">
+    <title>$!config.title</title>
+    <link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="main">
+
+    <div class="phone_hd">
+        <a class="back" href="javascript:history.go(-1);"><img
+                src="$!webPath/resources/style/system/front/wap/images/back.png" width="25" height="25"></a>
+        收藏商品
+        <a class="menu home" href="$!webPath/wap/index.htm"><img
+                src="$!webPath/resources/style/system/front/wap/images/home.png" width="25" height="25"></a>
+    </div>
+
+    <div class="mt50"></div>
+    <div class="group_list">
+        #foreach($obj in $objs)
+
+        #set($img="$!webPath/$!{obj.goods.goods_main_photo.path}/$!{obj.goods.goods_main_photo.name}_small.$!{obj.goods.goods_main_photo.ext}")
+
+        #set($img="$!webPath/$!{config.goodsImage.path}/$!{config.goodsImage.name}")
+
+        <dl>
+            <dt>
+                <a href="http://localhost:8080/shopping/goods_98461.htm">
+                    #if($!obj.goods.goods_main_photo)
+                    <img src="$!webPath/$!{obj.goods.goods_main_photo.path}/$!{obj.goods.goods_main_photo.name}_small.$!{obj.goods.goods_main_photo.ext}"
+                         width="90" height="90" style="display: inline;">
+                    #else
+                    <img src="$!webPath/$!{config.goodsImage.path}/$!{config.goodsImage.name}"
+                         width="90" height="90" style="display: inline;">
+                    #end
+                </a>
+            </dt>
+            <dd>
+                <h3>
+                    <b><a href="$!webPath/goods_$!{obj.goods.id}.htm">$!obj.goods.goods_name</a></b>
+                </h3>
+
+                <span>市场价：<b class="goods2market">¥$!{obj.goods.goods_price}</b><i>，</i> </span>
+
+                <span>商城价：<strong>¥$!{obj.goods.store_price}</strong></span>
+
+                <em>
+                    <span>收藏 量：<i style="color:#F00">$!{obj.goods.goods_collect}</i> 件， </span>
+                    <span>已售出<strong class="orange"> $!{obj.goods.goods_salenum}</strong>笔</span>
+                    <span class="cancel-fav"><a href="javascript:void(0);"
+                                                onclick="if(confirm('确定删除收藏?'))window.location.href='$!webPath/buyer/favorite_del.htm?mulitId=$!obj.id&currentPage=$!currentPage&type=0'"
+                                                class="blue">取消收藏</a></span>
+                </em>
+            </dd>
+        </dl>
+        #end
+    </div>
+
+</div>
+
+</body>
+</html>

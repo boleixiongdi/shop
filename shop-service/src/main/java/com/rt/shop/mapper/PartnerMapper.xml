@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.PartnerMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, sequence, title, url, image_id
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+	<select id="selectParterNoImg" resultType="com.rt.shop.entity.Partner" parameterType="com.rt.shop.entity.Partner">
+		select <include refid="Base_Column_List"/> from  shopping_partner t
+		where t.image_id is not null
+	</select>
+</mapper>

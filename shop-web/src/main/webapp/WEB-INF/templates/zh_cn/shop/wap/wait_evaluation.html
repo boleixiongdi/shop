@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-wap-web-app-capable" content="yes">
+    <meta name="apple-wap-web-app-status-bar-style" content="black-translucent">
+    <title>$!config.title</title>
+    <link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="main">
+
+    <div class="phone_hd">
+        <a class="back" href="javascript:history.go(-1);"><img
+                src="$!webPath/resources/style/system/front/wap/images/back.png" width="25" height="25"></a>
+        待评价
+        <!--<a class="remove-all" href="javascript:void(0)">清空</a>-->
+    </div>
+
+    <div class="mt50"></div>
+
+    #foreach($obj in $objs)
+
+    <div class="order_page_box">
+
+        <h1>
+            <span class="fl">订单号：$!{obj.order_id}</span>
+				<span class="fr">
+				<a href="$!webPath/buyer/order_evaluate.htm?id=$!{obj.id}" class="rx-assess-btn"><i
+                        class="fa fa-pencil"></i>评价</a>
+				</span>
+        </h1>
+
+        #foreach($gc in $obj.gcs)
+
+        #if($!gc.goods.goods_main_photo)
+        #set($img="$!webPath/$!{gc.goods.goods_main_photo.path}/$!{gc.goods.goods_main_photo.name}_small.$!{gc.goods.goods_main_photo.ext}")
+        #else
+        #set($img="$!webPath/$!{config.goodsImage.path}/$!{config.goodsImage.name}")
+        #end
+
+        <div class="order_goods">
+            <div class="dt">
+                <a href="$!webPath/goods_$!{gc.goods.id}.htm">
+                    <img src="$!img" width="50" height="50">
+                </a>
+            </div>
+            <div style="float: left;">
+                <a href="$!webPath/goods_$!{gc.goods.id}.htm">
+                    <span style="line-height: 24px">$!{gc.goods.goods_name}</span>
+                </a><br>
+            </div>
+        </div>
+
+
+        #end
+
+
+    </div>
+    #end
+
+</div>
+
+
+
+<div class="loading" id="loading" style="display: none;">
+    <ul>
+        <li><img src="$!webPath/resources/style/system/front/wap/images/loading.gif" height="16" width="16"></li>
+        <li>正在加载....</li>
+    </ul>
+</div>
+<div class="loading" id="loading_none" style="display: block;">
+    <ul>
+        <li>没有更多了....</li>
+    </ul>
+</div>
+
+
+</div>
+
+</div>
+
+
+</body>
+</html>

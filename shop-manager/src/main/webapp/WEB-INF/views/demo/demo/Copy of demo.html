@@ -1,0 +1,137 @@
+<div class="tabbable">
+	<ul class="nav nav-tabs" id="myTab">
+		<li class="active"><a data-toggle="tab" href="#home"> <i
+				class="green ace-icon fa fa-list-alt bigger-120"></i> 列表
+		</a></li>
+		@if(auth.hasPermission("demo:demo:add")){
+		<li class=""><a data-toggle="tab" href="#profile">
+		<i class="green ace-icon fa fa-plus bigger-120"></i> 添加
+		</a></li>
+		@}
+	</ul>
+
+	<div class="tab-content">
+		<div id="home" class="tab-pane active clearfix">
+			<form action="${ctxPath}/demo/list" method="post" id="search-form" target="list-page" class="clearfix">
+				
+				<div class="pull-left width-30">
+					<label>描述：</label>
+					<input type="text" class="width-80" name="description"/>
+				</div>
+				<div class="pull-left"><span class="btn btn-info btn-sm " id="search-btn">查 询</span></div>
+			</form>
+			<hr/>
+			<div id="list-page"></div>
+			<script type="text/javascript">
+				$("#search-form").getPageList({'submitBtnId':'search-btn'})
+			</script>
+		</div>
+
+		<div id="profile" class="tab-pane">
+			<form action="${ctxPath!}/demo/save" method="post" id="demo-save-form" enctype="multipart/form-data">
+								<div class="center padding-10">
+			<label>姓名：</label>
+			<input type="file" class="width-50" id="img" name="img" datatype="*"  nullmsg="请输入姓名！"/>
+		</div>
+		<div class="center padding-10">
+			<label>密码：</label>
+			<input type="text" class="width-50" name="password" datatype="*"  nullmsg="请输入密码！"/>
+		</div>
+		<div class="center padding-10">
+			<label>addtime：</label>
+			<input type="text" data-date-format="yyyy-mm-dd" readonly="readonly" class="width-50 span10 date-picker" name="addtime" datatype="*"  nullmsg="请输入addtime！"/>
+		</div>
+
+				<!-- <div class="center padding-10" >
+					<label style="vertical-align: top;">描述：</label>
+					<textarea type="text" class="width-50" name="description"></textarea>
+				</div> -->
+				<div class="margin-t15">
+					<span class="btn btn-info btn-block bigger-120" id="demo-save-btn">保 存</span>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+//上传
+$('#img').ace_file_input({
+	no_file:'请选择图片 ...',
+	btn_choose:'选择',
+	btn_change:'更改',
+	droppable:false,
+	onchange:null,
+	thumbnail:false //| true | large
+	//whitelist:'gif|png|jpg|jpeg'
+	//blacklist:'exe|php'
+	//onchange:''
+	//
+});
+//日期框
+$('.date-picker').datepicker();
+$(function(){
+var demosaveform = $("#demo-save-form").Validform({
+	ajaxPost : false,
+	beforeSubmit:function(curform){
+		
+	},
+	callback:function(data){
+		
+		
+		if(data) {
+			layer.msg('操作成功', 1, 1,function(){
+				if("false" == "true"){
+					setTimeout(function(){
+						location.reload();
+					},2000);
+					
+				}else{
+					setTimeout(function(){
+						$curmenu.trigger('click');
+					},2000);
+					
+				}
+				
+			});
+		}else{
+			alert(data);
+			console.log(data);
+			layer.msg('操作失败', 3, 1);
+		}
+	},
+	tiptype : function(msg, o, cssctl) {
+		if (!o.obj.is("form")) {
+			if (o.type != 2) {
+				tip.errorTip(msg,o.obj);
+			}
+		}
+	},
+	tipSweep : true
+});
+
+$("#demo-save-btn").click(function() {
+
+	demosaveform.submitForm(false);
+	return false;
+}); 
+
+$("#demo-save-form-cancel").click(function(){
+	layer.closeAll();
+	return false;
+});
+
+$("#demo-save-form input,#demo-save-form textarea").blur(function(){
+	layer.closeTips();
+	return false;
+})
+});
+</script>
+<!-- <div class="width-100 clearfix"  style="bottom: 0px;left: 0px;position:absolute;">
+	<span class="btn btn-primary btn-sm bigger-110 width-50  pull-left"  id="demo-save-btn">
+		<i class="ace-icon fa fa-floppy-o align-top bigger-125"></i> 保存
+	</span>
+	<span class="btn btn-yellow btn-sm bigger-110 width-50 pull-right" id="demo-save-form-cancel">
+		<i class="ace-icon fa fa-times align-top  bigger-125"></i> 取消
+	</span>
+</div> -->
+

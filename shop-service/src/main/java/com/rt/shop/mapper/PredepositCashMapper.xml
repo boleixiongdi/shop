@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.PredepositCashMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, cash_account, cash_admin_info, cash_amount, cash_bank, cash_info, cash_pay_status, cash_payment, cash_sn, cash_status, cash_userName, cash_admin_id, cash_user_id
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$!act.ac_title - $!config.title - Powered by zsCat</title>
+<meta name="keywords" content="$!config.keywords" />
+<meta name="description" content="$!config.description" />
+<meta name="generator" content="" />
+<meta name="author" content="">
+<meta name="copyright" content=" zsCat  Inc. All Rights Reserved">
+<link href="$!webPath/resources/style/system/front/default/css/public.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/system/front/default/css/index.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/system/front/default/css/goods.css" type="text/css" rel="stylesheet" />
+<link href="$!webPath/resources/style/system/front/default/css/goodshidden.css" type="text/css" rel="stylesheet" />
+<script src="$!webPath/resources/js/jquery-1.6.2.js"></script>
+<script src="$!webPath/resources/js/jquery.shop.common.js"></script>
+<script src="$!webPath/resources/js/jquery.lazyload.js"></script>
+<script>
+jQuery(document).ready(function(){
+ jQuery(".imgcenter_span img").lazyload({effect:"fadeIn",width:170,height:170});
+});
+</script>
+</head>
+
+<body>
+$!httpInclude.include("/top.htm")
+<div class="main"> $!httpInclude.include("/head.htm")
+  $!httpInclude.include("/nav1.htm")
+  <div class="index">
+   
+    
+      <div class="index2"> 
+      #if($!acts)
+      <div class="position">当前位置：<a href="$!webPath/index.htm" >首页</a>><a href="$!webPath/activityList.htm" >所有活动</a></div>
+	       #foreach($act in $acts)
+	        
+	        <div class="active_box">
+	          <div class="active_banner">
+	            <div class="active_left">
+	              <div class="active_banner_img"><a href="$!webPath/activity_$!{act.id}.htm"><img  src="$!imageWebServer/$!act.ac_acc.path/$!act.ac_acc.name" width="980" height="341" /></a></div>
+	              <span class="active_title">活动说明</span> <span class="active_p">$!act.ac_content</span> </div>
+	            <div class="active_right"><script src="$!webPath/advert_invoke.htm?id=262151"></script></div>
+	          </div>
+	        </div>
+	         <div class="active_list">
+	         </div>
+	       #end
+        #else
+        <div class="starshop_list" style="clear:both; margin:0px auto;">
+          <div class="sigh"> <span><img src="$!imageWebServer/resources/style/system/front/default/images/sigh.png" width="120" height="109" /></span> <b>对不起，没有对应的数据!</b> </div>
+        </div>
+        #end </div>
+   
+  </div>
+  $!httpInclude.include("/footer.htm") </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.IntegralGoodsorderMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, igo_msg, igo_order_sn, igo_pay_msg, igo_pay_time, igo_payment, igo_ship_code, igo_ship_content, igo_ship_time, igo_status, igo_total_integral, igo_trans_fee, igo_addr_id, igo_user_id
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

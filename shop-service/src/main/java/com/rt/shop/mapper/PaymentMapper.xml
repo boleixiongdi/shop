@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.PaymentMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, chinabank_account, chinabank_key, content, install, interfaceType, mark, merchantAcctId, name, partner, pid, rmbKey, safeKey, seller_email, spname, tenpay_key, tenpay_partner, trade_mode, type, store_id, alipay_divide_rate, alipay_rate, balance_divide_rate, currency_code, paypal_userId, poundage, lzbank_key, lzbank_partner, lzbank_trade_mode, weixin_appId, weixin_appSecret, weixin_partnerId, weixin_partnerKey, weixin_paySignKey
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

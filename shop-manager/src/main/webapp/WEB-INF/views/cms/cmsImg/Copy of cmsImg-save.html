@@ -1,0 +1,55 @@
+<div class="layer">
+	<form name="FormPost" id="cmsImg-save" class="FormGrid"  method="post"
+		action="${ctxPath}/cmsImg/save">
+		
+		<input type="hidden" value="${cmsImg.id!}" name="id"/>
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+								<tr class="FormData">
+			<td class="CaptionTD">title</td>
+			<td class="DataTD width-100"><input type="text" name="title" datatype="*"
+			nullmsg="请输入title！" value="${cmsImg.title!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">name</td>
+			<td class="DataTD width-100"><input type="text" name="name" datatype="*"
+			nullmsg="请输入name！" value="${cmsImg.name!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">path</td>
+			<td class="DataTD width-100"><input type="text" name="path" datatype="*"
+			nullmsg="请输入path！" value="${cmsImg.path!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">addtime</td>
+			<td class="DataTD width-100"><input type="text" name="addtime" datatype="*"
+			nullmsg="请输入addtime！" value="${cmsImg.addtime!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">typeid</td>
+			<td class="DataTD width-100"><input type="text" name="typeid" datatype="*"
+			nullmsg="请输入typeid！" value="${cmsImg.typeid!}"></td>
+		</tr>
+
+				<!-- <tr class="FormData">
+					<td class="CaptionTD">描述</td>
+					<td class="DataTD">
+						<textarea name="description" class="autosize-transition form-control "
+						style="resize: none;">${cmsImg.description!}</textarea>	
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+	</form>
+</div>
+<#save formId="cmsImg-save" />
+
+<script type="text/javascript">
+
+//描述框自动扩张高度
+$('textarea[class*=autosize]').autosize({append: "\n"});
+
+</script>

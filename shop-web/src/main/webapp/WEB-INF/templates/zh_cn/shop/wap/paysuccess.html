@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+<title>$!config.title</title>
+<link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+<script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+
+<div class="main">
+  
+  	<div class="user_bar">
+		<a class="back" href="$!webPath/buyer/order.htm">
+			<img src="$!webPath/resources/style/system/front/wap/images/back_black.png" width="25" height="25">
+		</a>
+		<span class="fl">支付结果反馈</span>
+		<a class="edit fr" href="$!webPath/wap/index.htm">
+			<img src="$!webPath/resources/style/system/front/wap/images/home.png" width="25" height="25">
+		</a>
+	</div>
+	
+	
+	<div class="info_form">
+	  <div style="height:49px;" class="mt50"></div>
+	  <ul>
+	     #if($!obj.order_status==0)
+                  #set($status="已取消")
+                #end
+                #if($!obj.order_status==10)
+                  #set($status="待付款")
+                #end
+                #if($!obj.order_status==15)
+                  #set($status="线下支付待审核")
+                #end
+                #if($!obj.order_status==20)
+                  #set($status="付款成功")
+                #end
+                #if($!obj.order_status==30)
+                  #set($status="已发货")        
+                #end                
+                #if($!obj.order_status==40)
+                #set($status="已收货")
+                #end
+                #if($!obj.order_status==50)
+                #set($status="已完成,已评价")                                              
+                #end
+                #if($!obj.order_status==60)
+                 #set($status="已结束")                                              
+                #end        
+        <li style="text-align:center; color:#F00;">$!status</li>
+
+        <li>订单编号：<b class="orange">$!{obj.order_id}</b></li>
+	    <li>支付金额：<b class="orange">¥$!{obj.totalPrice}</b></li>
+	    
+	  </ul>
+	</div>
+	
+	<div style="display:none" id="note" class="note"></div>
+	<div style="display:none" class="brand_class_opcity"></div>
+  	
+  
+   $!httpInclude.include("/footer.htm")
+   
+</div>
+
+</body>
+</html>

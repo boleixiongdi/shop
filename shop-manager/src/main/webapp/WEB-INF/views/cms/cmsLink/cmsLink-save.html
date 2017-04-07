@@ -1,0 +1,65 @@
+<div class="layer">
+	<form name="FormPost" id="cmsLink-save" class="FormGrid"  method="post"
+		action="${ctxPath}/cmsLink/save">
+		
+		<input type="hidden" value="${cmsLink.id!}" name="id"/>
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+								<tr class="FormData">
+			<td class="CaptionTD">颜色</td>
+			<td class="DataTD width-100"><input type="text" name="color" datatype="*"
+			nullmsg="请输入颜色！" value="${cmsLink.color!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">链接</td>
+			<td class="DataTD width-100"><input type="text" name="href" datatype="*"
+			nullmsg="请输入链接！" value="${cmsLink.href!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">图片</td>
+			<td class="DataTD width-100"><input type="text" name="image" datatype="*"
+			nullmsg="请输入图片！" value="${cmsLink.image!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">标题</td>
+			<td class="DataTD width-100"><input type="text" name="title" datatype="*"
+			nullmsg="请输入标题！" value="${cmsLink.title!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">权重</td>
+			<td class="DataTD width-100"><input type="text" name="weight" datatype="*"
+			nullmsg="请输入权重！" value="${cmsLink.weight!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">weightdate</td>
+			<td class="DataTD width-100"><input type="text" name="weightdate" datatype="*"
+			nullmsg="请输入weightdate！" value="${cmsLink.weightdate!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">categoryId</td>
+			<td class="DataTD width-100"><input type="text" name="categoryId" datatype="*"
+			nullmsg="请输入categoryId！" value="${cmsLink.categoryId!}"></td>
+		</tr>
+
+				<!-- <tr class="FormData">
+					<td class="CaptionTD">描述</td>
+					<td class="DataTD">
+						<textarea name="description" class="autosize-transition form-control "
+						style="resize: none;">${cmsLink.description!}</textarea>	
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+	</form>
+</div>
+<#save formId="cmsLink-save" />
+
+<script type="text/javascript">
+
+//描述框自动扩张高度
+$('textarea[class*=autosize]').autosize({append: "\n"});
+
+</script>

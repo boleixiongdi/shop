@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.SpareGoodsMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, contact, content, errorMessage, goods_old_price, goods_price, name, oldAndnew, sellMethod, seodescribe, seokeyword, status, title, area_id, img_id, spareGoodsClass_id, user_id, phone, img1_id, img2_id, img3_id, img4_id, main_img_id, img5_id, viewInFloor, sgf_id, QQ, recommend, down
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

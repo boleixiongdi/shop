@@ -1,0 +1,71 @@
+<div class="layer">
+	<form name="FormPost" id="nav-save" class="FormGrid"  method="post"
+		action="${ctxPath}/nav/save">
+		
+		<input type="hidden" value="${nav.id!}" name="id"/>
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+						
+		
+		
+		<tr class="FormData">
+			<td class="CaptionTD">标题</td>
+			<td class="DataTD width-100"><input type="text" name="title" datatype="*"
+			nullmsg="请输入title！" value="${nav.title!}"></td>
+		</tr>
+		<tr class="FormData">
+		<td class="CaptionTD">区域类型</td>
+					<td class="DataTD width-100">
+					@var areaList = dict.getDictListByType("nav_type");
+					<#select name="type">
+						@for(item in areaList){
+							<option value="${item.value!}" ${decode(item.value,area.type!,"selected","")}>
+							${item.label!}
+							</option>
+						@}
+					</#select>
+					</td>
+			</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">链接</td>
+			<td class="DataTD width-100"><input type="text" name="url" datatype="*"
+			nullmsg="请输入url！" value="${nav.url!}"></td>
+		</tr>
+		<tr class="FormData">
+					<td class="CaptionTD">是否显示</td>
+					<td class="DataTD">
+						<div class="radio inline">
+							<label>
+								<input name="display" type="radio" class="ace" checked value="1"/>
+								<span class="lbl"> 显示 </span>
+							</label>
+						</div>
+						<div class="radio inline">
+							<label>
+								<input name="display" type="radio" class="ace" value="0"/>
+								<span class="lbl"> 隐藏</span>
+							</label>
+						</div>
+					</td>
+				</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">sequence</td>
+			<td class="DataTD width-100"><input type="text" name="sequence" datatype="*"
+			nullmsg="请输入sequence！" value="${nav.sequence!}"></td>
+		</tr>
+		
+			</tbody>
+		</table>
+	</form>
+</div>
+<#save formId="nav-save" />
+
+<script type="text/javascript">
+
+//描述框自动扩张高度
+$('textarea[class*=autosize]').autosize({append: "\n"});
+
+</script>

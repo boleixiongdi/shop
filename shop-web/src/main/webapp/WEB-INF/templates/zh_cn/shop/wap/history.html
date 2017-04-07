@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-wap-web-app-capable" content="yes">
+    <meta name="apple-wap-web-app-status-bar-style" content="black-translucent">
+    <title>$!config.title</title>
+    <link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery.validate.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="main">
+
+    <div class="phone_hd">
+        <a class="back" href="javascript:history.go(-1);"><img
+                src="$!webPath/resources/style/system/front/wap/images/back.png" width="25" height="25"></a>
+        浏览记录
+        <a class="remove-all" href="javascript:void(0)">清空</a>
+    </div>
+
+    <div class="mt50"></div>
+    <div class="group_list">
+
+        <!-- <dl>
+            <dt>
+                <a href="http://localhost:8080/shopping/goods_98461.htm">
+                    <img src="http://localhost:8080/shopping/upload/store/32776/2016/05/27/2377f33f-3630-42cd-a77e-d8e07df989e1.jpg_small.jpg"
+                         original="http://localhost:8080/shopping/upload/store/32776/2016/05/27/2377f33f-3630-42cd-a77e-d8e07df989e1.jpg_small.jpg"
+                         onerror="this.src='http://localhost:8080/shopping/resources/style/common/images/good.jpg';"
+                         width="90" height="90" style="display: inline;">
+                </a>
+            </dt>
+            <dd>
+                <h3>
+                    <span style="color:#F00;">[买就送]</span> <b><a href="http://localhost:8080/shopping/goods_98461.htm">魅绒丽丝</a></b>
+                </h3>
+
+                <span>市场价：<b class="goods2market">¥10.00</b><i>，</i> </span>
+
+                <span>商城价：<strong>¥100.00</strong></span>
+
+                <em>
+                    <span>描述相符：<i style="color:#F00">0.0</i> 分， </span>
+
+                    <span>累计评价：<i style="color:#f60">0，</i></span>
+
+                    <span>已售出<strong class="orange"> 0</strong>笔</span>
+                </em>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>
+                <a href="http://localhost:8080/shopping/goods_98461.htm">
+                    <img src="http://localhost:8080/shopping/upload/store/32776/2016/05/27/2377f33f-3630-42cd-a77e-d8e07df989e1.jpg_small.jpg"
+                         original="http://localhost:8080/shopping/upload/store/32776/2016/05/27/2377f33f-3630-42cd-a77e-d8e07df989e1.jpg_small.jpg"
+                         onerror="this.src='http://localhost:8080/shopping/resources/style/common/images/good.jpg';"
+                         width="90" height="90" style="display: inline;">
+                </a>
+            </dt>
+            <dd>
+                <h3>
+                    <span style="color:#F00;">[买就送]</span> <b><a href="http://localhost:8080/shopping/goods_98461.htm">魅绒丽丝</a></b>
+                </h3>
+
+                <span>市场价：<b class="goods2market">¥10.00</b><i>，</i> </span>
+
+                <span>商城价：<strong>¥100.00</strong></span>
+
+                <em>
+                    <span>描述相符：<i style="color:#F00">0.0</i> 分， </span>
+
+                    <span>累计评价：<i style="color:#f60">0，</i></span>
+
+                    <span>已售出<strong class="orange"> 1</strong>笔</span>
+                </em>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <a href="http://localhost:8080/shopping/goods_98461.htm">
+                    <img src="http://localhost:8080/shopping/upload/store/32776/2016/05/27/2377f33f-3630-42cd-a77e-d8e07df989e1.jpg_small.jpg"
+                         original="http://localhost:8080/shopping/upload/store/32776/2016/05/27/2377f33f-3630-42cd-a77e-d8e07df989e1.jpg_small.jpg"
+                         onerror="this.src='http://localhost:8080/shopping/resources/style/common/images/good.jpg';"
+                         width="90" height="90" style="display: inline;">
+                </a>
+            </dt>
+            <dd>
+                <h3>
+                    <span style="color:#F00;">[买就送]</span> <b><a href="http://localhost:8080/shopping/goods_98461.htm">魅绒丽丝</a></b>
+                </h3>
+
+                <span>市场价：<b class="goods2market">¥10.00</b><i>，</i> </span>
+
+                <span>商城价：<strong>¥100.00</strong></span>
+
+                <em>
+                    <span>描述相符：<i style="color:#F00">0.0</i> 分， </span>
+
+                    <span>累计评价：<i style="color:#f60">0，</i></span>
+
+                    <span>已售出<strong class="orange"> 1</strong>笔</span>
+                </em>
+            </dd>
+        </dl> -->
+	<h1>暂无浏览记录...</h1>
+    </div>
+
+</div>
+
+<script>
+    //取消收藏
+    $(".remove-all").on('click', function () {
+        $('.group_list').find('dl').remove();
+        jQuery.post('test.html', {id: 23}, function (data) {
+        })
+    })
+</script>
+</body>
+</html>

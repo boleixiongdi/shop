@@ -1,0 +1,8 @@
+查询maven依赖  mvn dependency:tree -Dverbose      mvn dependency:tree
+
+shopping_goodstype_spec 商品类型与规格关联表     商品类型 shopping_goodsspecification   shopping_goodstype
+shopping_goods_spec 商品类型与规格关联表        商品规格 shopping_goodsspecproperty  goods
+
+
+http://blog.csdn.net/fengshizty/article/details/50578639#reply  session分布式
+http://localhost:8080/shop-admin/admin/login.htm

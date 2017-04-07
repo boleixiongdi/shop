@@ -1,0 +1,207 @@
+<!-- 头部 -->
+@layout("/cms/layout/cmsHeader.html"){}
+<ul  class="p_pop h_pop"  id="plugin_menu"  style="display: none">  <li><a  href="http://iuni.zsCat.com/plugin.php?id=dsu_paulsign:sign"  id="mn_plink_sign">每日签到</a></li>
+ </ul>
+<ul  class="p_pop h_pop"  id="mn_N6e26_menu"  style="display: none"><li><a  href="http://iuni.zsCat.com/portal.php?mod=list&catid=1"  hidefocus="true">资讯列表页</a></li><li><a  href="http://iuni.zsCat.com/portal.php?mod=view&aid=7"  hidefocus="true">资讯内容页</a></li></ul><ul  class="p_pop h_pop"  id="mn_forum_menu"  style="display: none"><li><a  href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2"  hidefocus="true">帖子列表页</a></li><li><a  href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=1&extra=page%3D1"  hidefocus="true">帖子内容页</a></li></ul><div  class="p_pop h_pop"  id="mn_userapp_menu"  style="display: none"></div><div  id="scbar"  class="cl y">
+<form  id="scbar_form"  method="post"  autocomplete="off"   action="http://iuni.zsCat.com/search.php?searchsubmit=yes"  target="_blank">
+<input  type="hidden"  name="mod"  id="scbar_mod"  value="forum">
+<input  type="hidden"  name="formhash"  value="8c788e32">
+<input  type="hidden"  name="srchtype"  value="title">
+<input  type="hidden"  name="srhfid"  value="0">
+<input  type="hidden"  name="srhlocality"  value="member::register">
+<ul>
+<li  class="scbar_type"><a  href="javascript:;"  id="scbar_type"   hidefocus="true">帖子</a></li>
+<li  class="scbar_txt"><input  type="text"  name="srchtxt"  id="scbar_txt"  value="请输入搜索内容"  autocomplete="off"  x-webkit-speech=""  speech=""  class=" xg1"  placeholder="请输入搜索内容"></li>
+<li  class="scbar_btn"><button  type="submit"  name="searchsubmit"  id="scbar_btn"  sc="1"  value="true"><strong  class="xi2">搜索</strong></button></li> 
+</ul>	
+</form>
+</div>
+<ul  id="scbar_type_menu"  class="p_pop"  style="display: none;"><li><a  href="javascript:;"  rel="article">文章</a></li><li><a  href="javascript:;"  rel="forum"  class="curtype">帖子</a></li><li><a  href="javascript:;"  rel="group">群组</a></li><li><a  href="javascript:;"  rel="user">用户</a></li></ul>
+<script  type="text/javascript">
+initSearchmenu('scbar', '');
+</script>
+</div>
+</div>
+
+
+<div  id="wp"  class="wp">
+<script  type="text/javascript">
+var strongpw = new Array();
+var pwlength = 6;
+</script>
+
+<script  src="${ctxPath!}/static/bbs/js/register.js"  type="text/javascript"></script>
+
+<div  id="ct"  class="ptm wp cl">
+<div  class="nfl"  id="main_succeed"  style="display: none">
+<div  class="f_c altw">
+<div  class="alert_right">
+<p  id="succeedmessage"></p>
+<p  id="succeedlocation"  class="alert_btnleft"></p>
+<p  class="alert_btnleft"><a  id="succeedmessage_href">如果您的浏览器没有自动跳转，请点击此链接</a></p>
+</div>
+</div>
+</div>
+<div  class="mn">
+
+<div  class="bm"  id="main_message">
+
+<div  class="bm_h bbs"  id="main_hnav">
+<span  class="y">
+<a  href="http://iuni.zsCat.com/member.php?mod=logging&action=login&referer=http%3A%2F%2Fiuni.zsCat.com%2Fportal.php"   class="xi2">已有帐号？现在登录</a>
+</span>
+<h3  id="layer_reginfo_t"  class="xs2">
+立即注册</h3>
+</div>
+
+<p  id="returnmessage4"></p>
+
+<form  method="post"  autocomplete="off"  name="register"  id="registerform"  enctype="multipart/form-data"   action="${ctxPath!}/static/bbs/img/立即注册 - zsCat创想轻主题模板 - Powered by zsCat.htm">
+<div  id="layer_reg"  class="bm_c">
+<input  type="hidden"  name="regsubmit"  value="yes">
+<input  type="hidden"  name="formhash"  value="8c788e32">
+<input  type="hidden"  name="referer"  value="http://iuni.zsCat.com/portal.php">
+<input  type="hidden"  name="activationauth"  value="">
+<div  class="mtw">
+<div  id="reginfo_a">
+<div  class="rfm">
+<table>
+<tbody><tr>
+<th><span  class="rq">*</span><label  for="a3Frjk">用户名:</label></th>
+<td><input  type="text"  id="a3Frjk"  name="a3Frjk"  class="px er"  tabindex="1"  value=""  autocomplete="off"  size="25"  maxlength="15"  required=""></td>
+<td  class="tipcol"><i  id="tip_a3Frjk"  class="p_tip"  style="display: none;">用户名由 3 到 15 个字符组成</i><kbd  id="chk_a3Frjk"  class="p_chk">用户名不得小于 3 个字符</kbd></td>
+</tr>
+</tbody></table>
+</div>
+
+<div  class="rfm">
+<table>
+<tbody><tr>
+<th><span  class="rq">*</span><label  for="KNJhWN">密码:</label></th>
+<td><input  type="password"  id="KNJhWN"  name="KNJhWN"  size="25"  tabindex="1"  class="px"  required=""></td>
+<td  class="tipcol"><i  id="tip_KNJhWN"  class="p_tip"  style="display: none;">请填写密码, 最小长度为 6 个字符</i><kbd  id="chk_KNJhWN"  class="p_chk"></kbd></td>
+</tr>
+</tbody></table>
+</div>
+
+<div  class="rfm">
+<table>
+<tbody><tr>
+<th><span  class="rq">*</span><label  for="fLKlmK">确认密码:</label></th>
+<td><input  type="password"  id="fLKlmK"  name="fLKlmK"  size="25"  tabindex="1"  value=""  class="px"  required=""></td>
+<td  class="tipcol"><i  id="tip_fLKlmK"  class="p_tip"  style="display: none;">请再次输入密码</i><kbd  id="chk_fLKlmK"  class="p_chk"></kbd></td>
+</tr>
+</tbody></table>
+</div>
+
+<div  class="rfm">
+<table>
+<tbody><tr>
+<th><span  class="rq">*</span><label  for="k6SgKs">Email:</label></th>
+<td><input  type="text"  id="k6SgKs"  name="k6SgKs"  autocomplete="off"  size="25"  tabindex="1"  class="px"  value=""  required=""><br><em  id="emailmore">&nbsp;</em></td>
+<td  class="tipcol"><i  id="tip_k6SgKs"  class="p_tip"  style="display: none;">请输入正确的邮箱地址</i><kbd  id="chk_k6SgKs"  class="p_chk"></kbd></td>
+</tr>
+</tbody></table>
+</div>
+
+<span  id="seccode_cSk1CMZb"><input  name="seccodehash"  type="hidden"  value="cSk1CMZb"><input  name="seccodemodid"  type="hidden"  value="member::register"><div  class="rfm"><table><tbody><tr><th><span  class="rq">*</span>验证码: </th><td><input  name="seccodeverify"  id="seccodeverify_cSk1CMZb"  type="text"  autocomplete="off"  style="width:100px"  class="txt px vm" > <a  href="javascript:;"   class="xi2">换一个</a><span  id="checkseccodeverify_cSk1CMZb"><img  src="${ctxPath!}/static/bbs/img/none.gif"  width="16"  height="16"  class="vm"></span><br><span  id="vseccode_cSk1CMZb">输入下图中的字符<br><img   width="100"  height="30"  src="${ctxPath!}/static/bbs/img/misc(1).php"  class="vm"  alt=""></span></td></tr></tbody></table></div></span>		
+<script  type="text/javascript"  reload="1">updateseccode('cSk1CMZb', '<div class="rfm"><table><tr><th><span class="rq">*</span><sec>: </th><td><sec><br /><sec></td></tr></table></div>', 'member::register');</script>
+
+</div>
+
+</div>
+
+</div>
+
+<div  id="layer_reginfo_b">
+<div  class="rfm mbw bw0">
+<table  width="100%">
+<tbody><tr>
+<th>&nbsp;</th>
+<td>
+<span  id="reginfo_a_btn">
+<em>&nbsp;</em><button  class="pn pnc"  id="registerformsubmit"  type="submit"  name="regsubmit"  value="true"  tabindex="1"><strong>提交</strong></button>
+</span>
+</td>
+<td></td>
+</tr>
+</tbody></table>
+</div>
+<div  class="rfm bw0  mbw">
+<hr  class="l">
+<table>
+<tbody><tr>
+<th>快捷登录:</th>
+<td>
+
+<a  href="http://iuni.zsCat.com/connect.php?mod=login&op=init&referer=http%3A%2F%2Fiuni.zsCat.com%2Fportal.php&statfrom=login"  target="_top"  rel="nofollow"><img  src="${ctxPath!}/static/bbs/img/qq_login.gif"  class="vm"></a>
+
+
+<a  href="javascript:;" ><img  src="${ctxPath!}/static/bbs/img/wechat_login.png"  class="vm"></a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</form>
+</div>
+<div  id="layer_regmessage"  class="f_c blr nfl"  style="display: none">
+<div  class="c"><div  class="alert_right">
+<div  id="messageleft1"></div>
+<p  class="alert_btnleft"  id="messageright1"></p>
+</div>
+</div>
+
+<div  id="layer_bbrule"  style="display: none">
+<div  class="c"  style="width:700px;height:350px;overflow:auto"><br>
+<br>
+<br>
+</div>
+<p  class="fsb pns cl hm">
+<button  class="pn pnc" ><span>同意</span></button>
+<button  class="pn" ><span>不同意</span></button>
+</p>
+</div>
+
+<script  type="text/javascript">
+var ignoreEmail = false;
+addFormEvent('registerform', 0);
+function showBBRule() {
+showDialog($('layer_bbrule').innerHTML, 'info', 'zsCat创想轻主题模板 网站服务条款');
+$('fwin_dialog_close').style.display = 'none';
+}
+</script>
+
+</div></div>
+</div>	</div>
+
+
+<div  id="ft">
+<div  class="wp cl">
+<div  id="flk"  class="y">
+<p>
+<a  href="http://wpa.qq.com/msgrd?V=3&Uin=951449465&Site=%D0%C2%C8%F1%B4%B4%CF%EB%C7%E1%D6%F7%CC%E2%C4%A3%B0%E5&Menu=yes&from=discuz"  target="_blank"  title="QQ"><img  src="${ctxPath!}/static/bbs/img/site_qq.jpg"  alt="QQ"></a><span  class="pipe">|</span><a  href="http://iuni.zsCat.com/archiver/">Archiver</a><span  class="pipe">|</span><a  href="http://iuni.zsCat.com/forum.php?mobile=yes">手机版</a><span  class="pipe">|</span><a  href="http://iuni.zsCat.com/forum.php?mod=misc&action=showdarkroom">小黑屋</a><span  class="pipe">|</span><a  href="http://iuni.zsCat.com/%E6%96%B0%E9%94%90%E5%88%9B%E6%83%B3%E8%BD%BB%E4%B8%BB%E9%A2%98%E7%A4%BE%E5%8C%BA"  target="_blank">zsCat创想轻主题模板</a>
+( <a  href="http://www.miitbeian.gov.cn/"  target="_blank">粤ICP备16073468号-1</a> )&nbsp;<a  href="http://discuz.qq.com/service/security"  target="_blank"  title="防水墙保卫网站远离侵害"><img  src="${ctxPath!}/static/bbs/img/security.png"></a><script  type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260287839'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260287839%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><span  id="cnzz_stat_icon_1260287839"><a  href="http://www.cnzz.com/stat/website.php?web_id=1260287839"  target="_blank"  title="站长统计"><img  border="0"  hspace="0"  vspace="0"  src="${ctxPath!}/static/bbs/img/pic.gif"></a></span><script  src="${ctxPath!}/static/bbs/img/stat.php"  type="text/javascript"></script><script  src="${ctxPath!}/static/bbs/img/core.php"  charset="utf-8"  type="text/javascript"></script></p>
+<p  class="xs0">
+GMT+8, 2016-10-16 23:10<span  id="debuginfo">
+, Processed in 0.024530 second(s), 12 queries
+.
+</span>
+</p>
+</div>
+<div  id="frt">
+<p>Powered by <a  href="http://www.zscat.top/index"  target="_blank">zsCat</a> <em>X3.2</em></p>
+<p  class="xs0">&#169; 2001-2013 <a  href="http://shop.zscat.top/index.htm"  target="_blank">zsCat商城.</a></p>
+</div></div>
+</div>
+<div  id="scrolltop"  style="left: auto; right: 0px; visibility: hidden;">
+<span  hidefocus="true"><a  title="返回顶部"   class="scrolltopa"><b>返回顶部</b></a></span>
+</div>
+<script  type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+			<div  id="discuz_tips"  style="display:none;"></div>
+			<script  type="text/javascript">
+				var tipsinfo = '49852173|X3.2|0.6||0||0|7|1476630638|41547c79d7530c8231e8e7e61af7d572|2';
+			</script>
+			<script  src="${ctxPath!}/static/bbs/js/discuz_tips.js"  type="text/javascript"  charset="UTF-8"></script>
+
+</body></html>

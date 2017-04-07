@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.StorePointMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, description_evaluate, description_evaluate_halfyear, description_evaluate_halfyear_count1, description_evaluate_halfyear_count2, description_evaluate_halfyear_count3, description_evaluate_halfyear_count4, description_evaluate_halfyear_count5, service_evaluate, service_evaluate_halfyear, service_evaluate_halfyear_count1, service_evaluate_halfyear_count2, service_evaluate_halfyear_count3, service_evaluate_halfyear_count4, service_evaluate_halfyear_count5, ship_evaluate, ship_evaluate_halfyear, ship_evaluate_halfyear_count1, ship_evaluate_halfyear_count2, ship_evaluate_halfyear_count3, ship_evaluate_halfyear_count4, ship_evaluate_halfyear_count5, store_evaluate1, store_id, statTime
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

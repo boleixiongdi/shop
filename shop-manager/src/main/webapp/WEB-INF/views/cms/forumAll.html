@@ -1,0 +1,702 @@
+<!-- 头部 -->
+@layout("/cms/layout/cmsHeader.html"){}
+<ul class="p_pop h_pop" id="plugin_menu" style="display: none">
+	<li><a
+		href="http://iuni.zsCat.com/plugin.php?id=dsu_paulsign:sign"
+		id="mn_plink_sign">每日签到</a></li>
+</ul>
+<ul class="p_pop h_pop" id="mn_N6e26_menu" style="display: none">
+	<li><a href="http://iuni.zsCat.com/portal.php?mod=list&catid=1"
+		hidefocus="true">资讯列表页</a></li>
+	<li><a href="http://iuni.zsCat.com/portal.php?mod=view&aid=7"
+		hidefocus="true">资讯内容页</a></li>
+</ul>
+<ul class="p_pop h_pop" id="mn_forum_menu"
+	style="position: absolute; z-index: 301; left: 438.5px; top: 121px; display: none;"
+	initialized="true" ctrlid="mn_forum" ctrlclass="hover">
+	<li><a
+		href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2"
+		hidefocus="true" class="hidefocus">帖子列表页</a></li>
+	<li><a
+		href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=1&extra=page%3D1"
+		hidefocus="true">帖子内容页</a></li>
+</ul>
+<div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div>
+<div id="scbar" class="cl y">
+	<form id="scbar_form" method="post" autocomplete="off"
+		action="http://iuni.zsCat.com/search.php?searchsubmit=yes"
+		target="_blank">
+		<input type="hidden" name="mod" id="scbar_mod" value="forum">
+		<input type="hidden" name="formhash" value="8c788e32"> <input
+			type="hidden" name="srchtype" value="title"> <input
+			type="hidden" name="srhfid" value=""> <input type="hidden"
+			name="srhlocality" value="forum::index">
+		<ul>
+			<li class="scbar_type"><a href="javascript:;" id="scbar_type"
+				hidefocus="true">帖子</a></li>
+			<li class="scbar_txt"><input type="text" name="srchtxt"
+				id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech=""
+				speech="" class=" xg1" placeholder="请输入搜索内容"></li>
+			<li class="scbar_btn"><button type="submit" name="searchsubmit"
+					id="scbar_btn" sc="1" value="true">
+					<strong class="xi2">搜索</strong>
+				</button></li>
+		</ul>
+	</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;">
+	<li><a href="javascript:;" rel="article">文章</a></li>
+	<li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li>
+	<li><a href="javascript:;" rel="group">群组</a></li>
+	<li><a href="javascript:;" rel="user">用户</a></li>
+</ul>
+<script type="text/javascript">
+	initSearchmenu('scbar', '');
+</script>
+</div>
+</div>
+
+
+<div id="wp" class="wp">
+
+	<style id="diy_style" type="text/css"></style>
+
+	<div class="wp">
+		<div id="diy1" class="area"></div>
+	</div>
+
+	<div id="ct" class="xr_forum wp cl">
+		<div id="diy_chart" class="area"></div>
+		<div class="mn">
+
+			<div id="category_grid" class="xr_grid bp">
+				<table cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr>
+							<td valign="top" class="category_l1">
+								<div class="newimgbox">
+									<div class="module cl slidebox_grid"
+										style="width: 288px; height: 288px; overflow: hidden;">
+										<script type="text/javascript">
+											var slideSpeed = 5000;
+											var slideImgsize = [ 288, 288 ];
+											var slideBorderColor = '#C2D5E3';
+											var slideBgColor = '#F2F2F2';
+											var slideImgs = new Array();
+											var slideImgLinks = new Array();
+											var slideImgTexts = new Array();
+											var slideSwitchColor = '#555';
+											var slideSwitchbgColor = '#F2F2F2';
+											var slideSwitchHiColor = '#C2D5E3';
+											slideImgs[1] = 'data/attachment/forum/201609/19/104743fn46z8nohyb4liny.gif';
+											slideImgLinks[1] = 'forum.php?mod=viewthread&tid=5385';
+											slideImgTexts[1] = '测试！！！！';
+											slideImgs[2] = 'data/attachment/forum/201609/19/104851ej9krmuw4rcdtwbj.jpg';
+											slideImgLinks[2] = 'forum.php?mod=viewthread&tid=5386';
+											slideImgTexts[2] = '测试！！！';
+											slideImgs[3] = 'data/attachment/forum/201609/26/011555u0ez494yi64kzx8h.jpg';
+											slideImgLinks[3] = 'forum.php?mod=viewthread&tid=5389';
+											slideImgTexts[3] = '看见了咯看看';
+											slideImgs[4] = 'data/attachment/forum/201609/26/185532bjffgkshwdtbwg6f.jpeg';
+											slideImgLinks[4] = 'forum.php?mod=viewthread&tid=5390';
+											slideImgTexts[4] = 'ba';
+											slideImgs[5] = 'data/attachment/forum/201609/26/205636qfh1hipxxiwuahfi.jpg';
+											slideImgLinks[5] = 'forum.php?mod=viewthread&tid=5391';
+											slideImgTexts[5] = '好';
+											slideImgs[6] = 'data/attachment/forum/201609/27/133521rf1jzgeig0g98td0.jpg';
+											slideImgLinks[6] = 'forum.php?mod=viewthread&tid=5392';
+											slideImgTexts[6] = '你好';
+											slideImgs[7] = 'data/attachment/forum/201609/27/133647mwdqmmassdyam4pq.jpg';
+											slideImgLinks[7] = 'forum.php?mod=viewthread&tid=5393';
+											slideImgTexts[7] = '大家好';
+											slideImgs[8] = 'data/attachment/forum/201609/27/211328t5voxtmx3l3xhh5j.png';
+											slideImgLinks[8] = 'forum.php?mod=viewthread&tid=5395';
+											slideImgTexts[8] = '啦啦啦啦';
+											slideImgs[9] = 'data/attachment/forum/201610/12/221910s181a50qvf058vzy.jpg';
+											slideImgLinks[9] = 'forum.php?mod=viewthread&tid=5399';
+											slideImgTexts[9] = '要射了，接到';
+											slideImgs[10] = 'data/attachment/forum/201610/14/001232yjmukpczc4fu5eke.png';
+											slideImgLinks[10] = 'forum.php?mod=viewthread&tid=5401';
+											slideImgTexts[10] = '1';
+										</script>
+										<script src="${ctxPath!}/static/bbs/js/forum_slide.js"
+											type="text/javascript"></script>
+										<div class="slideouter" id="outer_0.35494355694390833"
+											style="cursor: pointer; position: absolute; width: 286px; height: 286px; border: 1px solid #C2D5E3"></div>
+										<table cellspacing="0" cellpadding="0"
+											style="cursor: pointer; width: 288px; height: 288px; table-layout: fixed; overflow: hidden; background: #F2F2F2; text-align: center">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 0"
+														id="slide_0.35494355694390833"><img
+														src="${ctxPath!}/static/bbs/img/205636qfh1hipxxiwuahfi.jpg"
+														width="216" height="288" title="好"></td>
+												</tr>
+											</tbody>
+										</table>
+										<div id="switch_0.35494355694390833"
+											style="position: absolute; margin-left: 1px; margin-top: -18px">
+											<div id="switch_1_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">1</div>
+											<div id="switch_2_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">2</div>
+											<div id="switch_3_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">3</div>
+											<div id="switch_4_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">4</div>
+											<div id="switch_5_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(194, 213, 227);">5</div>
+											<div id="switch_6_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">6</div>
+											<div id="switch_7_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">7</div>
+											<div id="switch_8_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">8</div>
+											<div id="switch_9_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">9</div>
+											<div id="switch_10_0.35494355694390833" class="slideswitch"
+												style="opacity: 0.7; float: left; cursor: pointer; width: 17px; height: 17px; overflow: hidden; font-weight: bold; text-align: center; font-size: 9px; color: rgb(85, 85, 85); border-right-width: 1px; border-right-style: solid; border-right-color: rgb(194, 213, 227); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(194, 213, 227); background-color: rgb(242, 242, 242);">10</div>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td valign="top" class="category_l2">
+								<div class="subjectbox">
+									<h4>
+										<span class="tit_subject"></span>最新主题
+									</h4>
+									<ul class="category_newlist">
+									@for(item in page.list){
+										<li><a
+											href="${ctxPath!}/cms/forumDetail/${item.id!}"
+											title="${item.title!}" target="_blank">${item.title!}</a></li>
+									 @}	
+									</ul>
+								</div>
+							</td>
+							<td valign="top" class="category_l3">
+								<div class="replaybox">
+									<h4>
+										<span class="tit_replay"></span>最新回复
+									</h4>
+									<ul class="category_newlist">
+									@for(item in page.list){
+										<li><a
+											href="${ctxPath!}/cms/forumDetail/${item.id!}"
+											style="font-weight: bold; color: #2897C5"
+											title="${item.title!}" target="_blank">${item.title!}</a></li>
+									@}
+									</ul>
+								</div>
+							</td>
+							<td valign="top" class="category_l3">
+								<div class="hottiebox">
+									<h4>
+										<span class="tit_hottie"></span>热帖
+									</h4>
+									<ul class="category_newlist">
+									@for(item in page.list){
+										<li><a
+											href="${ctxPath!}/cms/forumDetail/${item.id!}"
+											style="font-weight: bold; color: #2897C5"
+											title="${item.title!}" target="_blank">${item.title!}</a></li>
+									 @}
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div id="chart" class="cl">
+				<ul class="chart z">
+					<li class="t">今日帖数： <em>0</em></li>
+					<li class="ye">昨日帖数： <em>0</em></li>
+					<li class="p">帖子数： <em>569</em></li>
+					<li class="m">会员总数： <em>1165</em></li>
+				</ul>
+				<div class="y">
+					欢迎新会员：<em><a
+						href="http://iuni.zsCat.com/home.php?mod=space&username=l19950801"
+						target="_blank" class="xi2">l19950801</a></em>
+				</div>
+			</div>
+
+
+
+			<div class="xr_forum_box bp  flg cl">
+				<div class="xr_forum_tit">
+					<h2>手机测试专区</h2>
+				</div>
+				<div id="category_53" style="">
+					<table cellspacing="0" cellpadding="0" class="fl_tb">
+						<tbody>
+							<tr>
+								<td class="fl_g" width="49.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=54"><img
+											src="${ctxPath!}/static/bbs/img/common_54_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=54">特殊主题</a>
+										</dt>
+										<dd class="desc">可以发布活动、悬赏、投票、辩论、商品等特殊主题，手机版也可以支持啦。</dd>
+										<dd>
+											<em>主题: 12</em>, <em>帖数: 80</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="49.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=55"><img
+											src="${ctxPath!}/static/bbs/img/common_55_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=55">视频演示</a>
+										</dt>
+										<dd class="desc">此版块可以发布优酷，腾讯等视频。手机版也同步支持视频播放。</dd>
+										<dd>
+											<em>主题: 8</em>, <em>帖数: 27</em>
+										</dd>
+									</dl>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="xr_forum_box bp  flg cl">
+				<div class="xr_forum_tit">
+					<h2>玩机专区</h2>
+				</div>
+				<div id="category_1" style="">
+					<table cellspacing="0" cellpadding="0" class="fl_tb">
+						<tbody>
+							<tr>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2"><img
+											src="${ctxPath!}/static/bbs/img/common_2_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2">O粉玩机</a>
+										</dt>
+										<dd class="desc">OPPO手机ROM刷机讨论天地</dd>
+										<dd>
+											<em>主题: 52</em>, <em>帖数: 158</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=36"><img
+											src="${ctxPath!}/static/bbs/img/common_36_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=36">R7&amp;R7
+												Plus</a>
+										</dt>
+										<dd class="desc">OPPO 2015年新款产品R7交流区</dd>
+										<dd>
+											<em>主题: 1</em>, <em>帖数: 1</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=37"><img
+											src="${ctxPath!}/static/bbs/img/common_37_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=37">OPPO
+												Find 7</a>
+										</dt>
+										<dd class="desc">6吋2.5D弧度屏/4100毫安闪充大电池/充电5分钟 通话两小时</dd>
+										<dd>
+											<em>主题: 10</em>, <em>帖数: 20</em>
+										</dd>
+									</dl>
+								</td>
+							</tr>
+							<tr class="fl_row">
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=38"><img
+											src="${ctxPath!}/static/bbs/img/common_38_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=38">OPPO
+												R1C</a>
+										</dt>
+										<dd class="desc">钻石流光镜面，R1C不止一面</dd>
+										<dd>
+											<em>主题: 1</em>, <em>帖数: 1</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=39"><img
+											src="${ctxPath!}/static/bbs/img/common_39_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=39">OPPO
+												N3</a>
+										</dt>
+										<dd class="desc">与生俱来的206°自由旋转再次跃进</dd>
+										<dd>
+											<em>主题: 1</em>, <em>帖数: 1</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=40"><img
+											src="${ctxPath!}/static/bbs/img/common_40_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=40">更多产品</a>
+										</dt>
+										<dd class="desc">OPPO更多产品讨论、交流等</dd>
+										<dd>
+											<em>主题: 25</em>, <em>帖数: 32</em>
+										</dd>
+									</dl>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="xr_forum_box bp  flg cl">
+				<div class="xr_forum_tit">
+					<h2>官方专区</h2>
+				</div>
+				<div id="category_41" style="">
+					<table cellspacing="0" cellpadding="0" class="fl_tb">
+						<tbody>
+							<tr>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=42"><img
+											src="${ctxPath!}/static/bbs/img/common_42_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=42">OPPO资讯</a>
+										</dt>
+										<dd class="desc">OPPO最全最新的消息、新闻、活动等</dd>
+										<dd>
+											<em>主题: 9</em>, <em>帖数: 11</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=43"><img
+											src="${ctxPath!}/static/bbs/img/common_43_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=43">O粉汇</a>
+										</dt>
+										<dd class="desc">O粉丝团活动、聚会、交流专区</dd>
+										<dd>
+											<em>主题: 3</em>, <em>帖数: 4</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=44"><img
+											src="${ctxPath!}/static/bbs/img/common_44_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=44">OPPO校园</a>
+										</dt>
+										<dd class="desc">OPPO青春大学校园活动平台的交流、讨论</dd>
+										<dd>
+											<em>主题: 6</em>, <em>帖数: 7</em>
+										</dd>
+									</dl>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="xr_forum_box bp  flg cl">
+				<div class="xr_forum_tit">
+					<h2>O粉娱乐</h2>
+				</div>
+				<div id="category_45" style="">
+					<table cellspacing="0" cellpadding="0" class="fl_tb">
+						<tbody>
+							<tr>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=46"><img
+											src="${ctxPath!}/static/bbs/img/common_46_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=46">图片瀑布流</a>
+										</dt>
+										<dd class="desc">图片生活记录和拍照技巧分享、组织的摄影等活动交流、团建</dd>
+										<dd>
+											<em>主题: 41</em>, <em>帖数: 164</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=47"><img
+											src="${ctxPath!}/static/bbs/img/common_47_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=47">娱乐大杂烩</a>
+										</dt>
+										<dd class="desc">OPPO社区娱乐八卦、分享心情等各种娱乐八卦新闻信息</dd>
+										<dd>
+											<em>主题: 7</em>, <em>帖数: 13</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=48"><img
+											src="${ctxPath!}/static/bbs/img/common_48_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=48">新手俱乐部</a>
+										</dt>
+										<dd class="desc">OPPO社区新手入门、报到基地、新人的学习指导版块</dd>
+										<dd>
+											<em>主题: 10</em>, <em>帖数: 12</em>
+										</dd>
+									</dl>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="xr_forum_box bp  flg cl">
+				<div class="xr_forum_tit">
+					<h2>O粉服务</h2>
+				</div>
+				<div id="category_49" style="">
+					<table cellspacing="0" cellpadding="0" class="fl_tb">
+						<tbody>
+							<tr>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=50"><img
+											src="${ctxPath!}/static/bbs/img/common_50_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=50">我要求助</a>
+										</dt>
+										<dd class="desc">OPPO为用户提供答疑及服务</dd>
+										<dd>
+											<em>主题: 16</em>, <em>帖数: 22</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=51"><img
+											src="${ctxPath!}/static/bbs/img/common_51_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=51">预约服务</a>
+										</dt>
+										<dd class="desc">预约用户专享预约服务通道</dd>
+										<dd>
+											<em>主题: 8</em>, <em>帖数: 11</em>
+										</dd>
+									</dl>
+								</td>
+								<td class="fl_g" width="32.9%">
+									<div class="fl_icn_g" style="width: 100px;">
+										<a
+											href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=52"><img
+											src="${ctxPath!}/static/bbs/img/common_52_icon.png"
+											align="left" alt=""></a>
+									</div>
+									<dl style="margin-left: 100px;">
+										<dt>
+											<a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=52">论坛事务所</a>
+										</dt>
+										<dd class="desc">O粉事务处理、问题、建议反馈之处</dd>
+										<dd>
+											<em>主题: 4</em>, <em>帖数: 5</em>
+										</dd>
+									</dl>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="wp mtn">
+			<div id="diy3" class="area"></div>
+		</div>
+
+		<div class="bp lk">
+			<div id="category_lk" class="bm_c ptm">
+				<ul class="m mbn cl">
+					<li class="lk_logo mbm bbda cl"><img
+						src="${ctxPath!}/static/bbs/img/logo_88_31.gif" border="0"
+						alt="zsCat">
+					<div class="lk_content z">
+							<h5>
+								<a href="http://www.zscat.top/index" target="_blank">zsCat</a>
+							</h5>
+							<p>提供最新 zsCat 产品新闻、软件下载与技术交流</p>
+						</div></li>
+				</ul>
+				<ul class="x mbm cl">
+					<li><a href="http://shop.zscat.top/index.htm" target="_blank"
+						title="zsCat商城">zsCat商城</a></li>
+					<li><a href="http://www.manyou.com/" target="_blank"
+						title="漫游平台">漫游平台</a></li>
+					<li><a href="http://www.yeswan.com/" target="_blank"
+						title="Yeswan">Yeswan</a></li>
+					<li><a href="http://www.verydz.com/" target="_blank"
+						title="专用主机">专用主机</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+<div id="ft">
+	<div class="wp cl">
+		<div id="flk" class="y">
+			<p>
+				<a
+					href="http://wpa.qq.com/msgrd?V=3&Uin=951449465&Site=%D0%C2%C8%F1%B4%B4%CF%EB%C7%E1%D6%F7%CC%E2%C4%A3%B0%E5&Menu=yes&from=discuz"
+					target="_blank" title="QQ"><img
+					src="${ctxPath!}/static/bbs/img/site_qq.jpg" alt="QQ"></a><span
+					class="pipe">|</span><a href="http://iuni.zsCat.com/archiver/">Archiver</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/forum.php?mobile=yes">手机版</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/forum.php?mod=misc&action=showdarkroom">小黑屋</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/%E6%96%B0%E9%94%90%E5%88%9B%E6%83%B3%E8%BD%BB%E4%B8%BB%E9%A2%98%E7%A4%BE%E5%8C%BA"
+					target="_blank">zsCat创想轻主题模板</a> ( <a
+					href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16073468号-1</a>
+				)&nbsp;<a href="http://discuz.qq.com/service/security"
+					target="_blank" title="防水墙保卫网站远离侵害"><img
+					src="${ctxPath!}/static/bbs/img/security.png"></a>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260287839'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260287839%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+				<span id="cnzz_stat_icon_1260287839"><a
+					href="http://www.cnzz.com/stat/website.php?web_id=1260287839"
+					target="_blank" title="站长统计"><img border="0" hspace="0"
+						vspace="0" src="${ctxPath!}/static/bbs/img/pic.gif"></a></span>
+				<script src="${ctxPath!}/static/bbs/img/stat.php"
+					type="text/javascript"></script>
+				<script src="${ctxPath!}/static/bbs/img/core.php" charset="utf-8"
+					type="text/javascript"></script>
+			</p>
+			<p class="xs0">
+				GMT+8, 2016-10-16 20:21<span id="debuginfo"> , Processed in
+					0.035907 second(s), 12 queries . </span>
+			</p>
+		</div>
+		<div id="frt">
+			<p>
+				Powered by <a href="http://www.zscat.top/index" target="_blank">zsCat</a>
+				<em>X3.2</em>
+			</p>
+			<p class="xs0">
+				&#169; 2001-2013 <a href="http://shop.zscat.top/index.htm" target="_blank">zsCat商城
+					Inc.</a>
+			</p>
+		</div>
+	</div>
+</div>
+<div id="scrolltop">
+	<span hidefocus="true"><a title="返回顶部" class="scrolltopa"><b>返回顶部</b></a></span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+<div id="discuz_tips" style="display: none;"></div>
+<script type="text/javascript">
+				var tipsinfo = '49852173|X3.2|0.6||0||0|7|1476620502|5d6835c9d071b038408446878c73c44e|2';
+			</script>
+<script src="${ctxPath!}/static/bbs/js/discuz_tips.js"
+	type="text/javascript" charset="UTF-8"></script>
+
+</body>
+</html>

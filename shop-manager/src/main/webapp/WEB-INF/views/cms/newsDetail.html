@@ -1,0 +1,653 @@
+<!-- 头部 -->
+@layout("/cms/layout/cmsHeader.html"){}
+
+
+
+<ul class="p_pop h_pop" id="plugin_menu" style="display: none">
+	<li><a
+		href="http://iuni.zsCat.com/plugin.php?id=dsu_paulsign:sign"
+		id="mn_plink_sign">每日签到</a></li>
+</ul>
+<ul class="p_pop h_pop" id="mn_N6e26_menu" style="display: none">
+	<li><a href="http://iuni.zsCat.com/portal.php?mod=list&catid=1"
+		hidefocus="true">资讯列表页</a></li>
+	<li><a href="http://iuni.zsCat.com/portal.php?mod=view&aid=7"
+		hidefocus="true">资讯内容页</a></li>
+</ul>
+<ul class="p_pop h_pop" id="mn_forum_menu" style="display: none">
+	<li><a
+		href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2"
+		hidefocus="true">帖子列表页</a></li>
+	<li><a
+		href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=1&extra=page%3D1"
+		hidefocus="true">帖子内容页</a></li>
+</ul>
+<div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div>
+<div id="scbar" class="cl y">
+	<form id="scbar_form" method="post" autocomplete="off"
+		action="http://iuni.zsCat.com/search.php?searchsubmit=yes"
+		target="_blank">
+		<input type="hidden" name="mod" id="scbar_mod" value="forum">
+		<input type="hidden" name="formhash" value="8c788e32"> <input
+			type="hidden" name="srchtype" value="title"> <input
+			type="hidden" name="srhfid" value="0"> <input type="hidden"
+			name="srhlocality" value="portal::view">
+		<ul>
+			<li class="scbar_type"><a href="javascript:;" id="scbar_type"
+				hidefocus="true">帖子</a></li>
+			<li class="scbar_txt"><input type="text" name="srchtxt"
+				id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech=""
+				speech="" class=" xg1" placeholder="请输入搜索内容"></li>
+			<li class="scbar_btn"><button type="submit" name="searchsubmit"
+					id="scbar_btn" sc="1" value="true">
+					<strong class="xi2">搜索</strong>
+				</button></li>
+		</ul>
+	</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;">
+	<li><a href="javascript:;" rel="article">文章</a></li>
+	<li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li>
+	<li><a href="javascript:;" rel="group">群组</a></li>
+	<li><a href="javascript:;" rel="user">用户</a></li>
+</ul>
+<script type="text/javascript">
+	initSearchmenu('scbar', '');
+</script>
+</div>
+</div>
+
+
+<div id="wp" class="wp">
+	<script src="${ctxPath!}/static/bbs/js/forum_viewthread.js"
+		type="text/javascript"></script>
+	<script type="text/javascript">
+		zoomstatus = parseInt(1), imagemaxwidth = '900',
+				aimgcount = new Array();
+	</script>
+	<div id="pt" class="bm cl">
+		<div class="z">
+			<a href="http://iuni.zsCat.com/" class="nvhm" title="首页">zsCat创想轻主题模板</a>
+			<em>&#8250;</em> <a href="http://iuni.zsCat.com/portal.php">首页</a> <em>&#8250;</em><a
+				href="http://iuni.zsCat.com/portal.php?mod=list&catid=1">新闻资讯</a> <em>&#8250;</em>
+			查看内容
+		</div>
+	</div>
+
+	<style id="diy_style" type="text/css">
+#frameR418gh {
+	border: 0px none !important;
+}
+
+#portal_block_20 {
+	border: 0px none !important;
+}
+
+#framevBXLUX {
+	border: 0px none !important;
+}
+
+#portal_block_21 {
+	border: 0px none !important;
+}
+
+#frameqkPF4V {
+	border: 0px none !important;
+}
+
+#portal_block_22 {
+	border: 0px none !important;
+}
+</style>
+	<div class="wp">
+		<div id="diy1" class="area"></div>
+	</div>
+	<div id="ct" class="ct2 wp cl">
+		<div class="mn">
+			<div class="xr_vw vw" style="background: #fff;">
+				<div class="h hm">
+					<h1 class="ph">金色版 打造纽约时装周梦幻之旅</h1>
+					<p class="xg1">
+						2015-8-10 16:25<span class="pipe">|</span> 发布者: <a
+							href="http://iuni.zsCat.com/home.php?mod=space&uid=1">admin</a><span
+							class="pipe">|</span> 查看: <em id="_viewnum">2515</em><span
+							class="pipe">|</span> 评论: <a
+							href="http://iuni.zsCat.com/portal.php?mod=comment&id=7&idtype=aid"
+							title="查看全部评论"><em id="_commentnum">2</em></a>
+					</p>
+				</div>
+
+				<div id="diysummarytop" class="area"></div>
+
+				<div class="s">
+					<div>
+						<strong>摘要</strong>:
+						${article.content!} ...
+					</div>
+				</div>
+				<div id="diysummarybottom" class="area"></div>
+
+				<div class="d">
+
+					<div id="diycontenttop" class="area"></div>
+
+					<table cellpadding="0" cellspacing="0" class="vwtb">
+						<tbody>
+							<tr>
+								<td id="article_content">${article.description!}</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div id="diycontentbottom" class="area"></div>
+
+					<script src="${ctxPath!}/static/bbs/js/home.js"
+						type="text/javascript"></script>
+					<div id="click_div">
+						<table cellpadding="0" cellspacing="0" class="atd">
+							<tbody>
+								<tr>
+									<td><a
+										href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=click&op=add&clickid=1&idtype=aid&id=7&hash=c3523f6327dc8de178134ff98684bd55&handlekey=clickhandle"
+										id="click_aid_7_1">
+											<div class="atdc">
+												<div class="ac3" style="height: 50px;">
+													<em>2</em>
+												</div>
+											</div> <img src="${ctxPath!}/static/bbs/img/xianhua.gif" alt=""><br>鲜花
+									</a></td>
+									<td><a
+										href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=click&op=add&clickid=2&idtype=aid&id=7&hash=c3523f6327dc8de178134ff98684bd55&handlekey=clickhandle"
+										id="click_aid_7_2">
+											<div class="atdc">
+												<div class="ac2" style="height: 50px;">
+													<em>2</em>
+												</div>
+											</div> <img src="${ctxPath!}/static/bbs/img/woshou.gif" alt=""><br>握手
+									</a></td>
+									<td><a
+										href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=click&op=add&clickid=3&idtype=aid&id=7&hash=c3523f6327dc8de178134ff98684bd55&handlekey=clickhandle"
+										id="click_aid_7_3">
+											<div class="atdc">
+												<div class="ac2" style="height: 25px;">
+													<em>1</em>
+												</div>
+											</div> <img src="${ctxPath!}/static/bbs/img/leiren.gif" alt=""><br>雷人
+									</a></td>
+									<td><a
+										href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=click&op=add&clickid=4&idtype=aid&id=7&hash=c3523f6327dc8de178134ff98684bd55&handlekey=clickhandle"
+										id="click_aid_7_4"> <img
+											src="${ctxPath!}/static/bbs/img/luguo.gif" alt=""><br>路过
+									</a></td>
+									<td><a
+										href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=click&op=add&clickid=5&idtype=aid&id=7&hash=c3523f6327dc8de178134ff98684bd55&handlekey=clickhandle"
+										id="click_aid_7_5"> <img
+											src="${ctxPath!}/static/bbs/img/jidan.gif" alt=""><br>鸡蛋
+									</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<script type="text/javascript">
+							function errorhandle_clickhandle(message, values) {
+								if (values['id']) {
+									showCreditPrompt();
+									show_click(values['idtype'], values['id'],
+											values['clickid']);
+								}
+							}
+						</script>
+
+						<h3 class="mbm xs1">
+							刚表态过的朋友 (<a href="javascript:;">5 人</a>)
+						</h3>
+						<div id="trace_div" class="xs1">
+							<ul id="trace_ul" class="ml mls cl">
+								<li>
+									<div class="avt">
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=828"
+											target="_blank" title="雷人"><img
+											src="${ctxPath!}/static/bbs/img/avatar.php"></a>
+									</div>
+									<p>
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=828"
+											title="大苇" target="_blank">大苇</a>
+									</p>
+								</li>
+								<li>
+									<div class="avt">
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=515"
+											target="_blank" title="握手"><img
+											src="${ctxPath!}/static/bbs/img/avatar(1).php"></a>
+									</div>
+									<p>
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=515"
+											title="123234" target="_blank">123234</a>
+									</p>
+								</li>
+								<li>
+									<div class="avt">
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=305"
+											target="_blank" title="握手"><img
+											src="${ctxPath!}/static/bbs/img/avatar(2).php"></a>
+									</div>
+									<p>
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=305"
+											title="zyczyy" target="_blank">zyczyy</a>
+									</p>
+								</li>
+								<li>
+									<div class="avt">
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=4"
+											target="_blank" title="鲜花"><img
+											src="${ctxPath!}/static/bbs/img/avatar(3).php"></a>
+									</div>
+									<p>
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=4"
+											title="xinrui" target="_blank">xinrui</a>
+									</p>
+								</li>
+								<li>
+									<div class="avt">
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=253"
+											target="_blank" title="鲜花"><img
+											src="${ctxPath!}/static/bbs/img/avatar(4).php"></a>
+									</div>
+									<p>
+										<a href="http://iuni.zsCat.com/home.php?mod=space&uid=253"
+											title="yac999" target="_blank">yac999</a>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<div id="diycontentclickbottom" class="area"></div>
+
+					<div class="bdsharebuttonbox bdshare-button-style0-24"
+						data-bd-bind="1476753974551">
+						<a href="http://iuni.zsCat.com/#" class="bds_more" data-cmd="more"></a><a
+							title="分享到QQ空间" href="http://iuni.zsCat.com/#" class="bds_qzone"
+							data-cmd="qzone"></a><a title="分享到新浪微博"
+							href="http://iuni.zsCat.com/#" class="bds_tsina" data-cmd="tsina"></a><a
+							title="分享到腾讯微博" href="http://iuni.zsCat.com/#" class="bds_tqq"
+							data-cmd="tqq"></a><a title="分享到人人网"
+							href="http://iuni.zsCat.com/#" class="bds_renren"
+							data-cmd="renren"></a><a title="分享到微信"
+							href="http://iuni.zsCat.com/#" class="bds_weixin"
+							data-cmd="weixin"></a>
+					</div>
+					<script>
+						window._bd_share_config = {
+							"common" : {
+								"bdSnsKey" : {},
+								"bdText" : "",
+								"bdMini" : "2",
+								"bdMiniList" : false,
+								"bdPic" : "",
+								"bdStyle" : "0",
+								"bdSize" : "24"
+							},
+							"share" : {}
+						};
+						with (document)
+							0[(getElementsByTagName('head')[0] || body)
+									.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+									+ ~(-new Date() / 36e5)];
+					</script>
+
+				</div>
+
+				<div class="o cl ptm pbm">
+					<a
+						href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=favorite&type=article&id=7&handlekey=favoritearticlehk_7"
+						id="a_favorite" class="oshr ofav">收藏</a> <a
+						href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=share&type=article&id=7&handlekey=sharearticlehk_7"
+						id="a_share" class="oshr">分享</a> <a
+						href="http://iuni.zsCat.com/misc.php?mod=invite&action=article&id=7"
+						id="a_invite" class="oshr oivt">邀请</a>
+				</div>
+				<div class="pren pbw ptw cl">
+					<em>上一篇：<a
+						href="http://iuni.zsCat.com/portal.php?mod=view&aid=6">业界革命发布高灵敏度平面振膜耳机PM-1</a></em><em>下一篇：<a
+						href="http://iuni.zsCat.com/portal.php?mod=view&aid=8">品鉴会“环游世界”，我还想再来一遍！</a></em>
+				</div>
+			</div>
+
+			<div id="diycontentrelatetop" class="area"></div>
+			<div id="related_article" class="bm">
+				<div class="bm_h cl">
+					<h3>相关阅读</h3>
+				</div>
+				<div class="bm_c">
+					<ul class="xl xl2 cl" id="raid_div">
+						<input type="hidden" value="1">
+						<li>&#8226; <a
+							href="http://iuni.zsCat.com/portal.php?mod=view&aid=1">IUNI
+								U2、U3、I1怎样才能省电？这些方法能让它们再战五百年</a></li>
+						<input type="hidden" value="8">
+						<li>&#8226; <a
+							href="http://iuni.zsCat.com/portal.php?mod=view&aid=8">品鉴会“环游世界”，我还想再来一遍！</a></li>
+						<input type="hidden" value="9">
+						<li>&#8226; <a
+							href="http://iuni.zsCat.com/portal.php?mod=view&aid=9">欧冠称雄见证巴萨“王者归来”</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="diycontentrelate" class="area"></div>
+
+			<div id="comment" class="bm">
+				<div class="bm_h cl">
+					<a href="javascript:;" class="y xi2">发表评论</a>
+					<h3>最新评论</h3>
+				</div>
+				<div id="comment_ul" class="bm_c">
+					<a name="comment_anchor_27"></a>
+					<dl id="comment_27_li" class="ptm pbm bbda cl">
+						<dt class="mbm">
+							<span class="y xw0 xi2"> <a href="javascript:;">引用</a>
+							</span> <a href="http://iuni.zsCat.com/home.php?mod=space&uid=828"
+								class="xi2 xw1" c="1" mid="card_5943">大苇</a> <span
+								class="xg1 xw0">2016-10-13 00:31</span>
+						</dt>
+						<dd>s您热您是逆袭毅</dd>
+					</dl>
+					<a name="comment_anchor_23"></a>
+					<dl id="comment_23_li" class="ptm pbm bbda cl">
+						<dt class="mbm">
+							<span class="y xw0 xi2"> <a href="javascript:;">引用</a>
+							</span> <a href="http://iuni.zsCat.com/home.php?mod=space&uid=4"
+								class="xi2 xw1" c="1" mid="card_2945">xinrui</a> <span
+								class="xg1 xw0">2016-8-21 21:50</span>
+						</dt>
+						<dd>这个好用</dd>
+					</dl>
+					<p class="ptm pbm">
+						<a
+							href="http://iuni.zsCat.com/portal.php?mod=comment&id=7&idtype=aid"
+							class="xi2">查看全部评论(<em id="_commentnum">2</em>)
+						</a>
+					</p>
+					<form id="cform" name="cform"
+						action="http://iuni.zsCat.com/portal.php?mod=portalcp&ac=comment"
+						method="post" autocomplete="off">
+						<div class="tedt">
+							<div class="area">
+								<textarea name="message" rows="3" class="pt" id="message"></textarea>
+							</div>
+						</div>
+
+						<input type="hidden" name="portal_referer"
+							value="portal.php?mod=view&amp;aid=7#comment"> <input
+							type="hidden" name="referer"
+							value="portal.php?mod=view&amp;aid=7#comment"> <input
+							type="hidden" name="id" value="0"> <input type="hidden"
+							name="idtype" value=""> <input type="hidden" name="aid"
+							value="7"> <input type="hidden" name="formhash"
+							value="8c788e32"> <input type="hidden" name="replysubmit"
+							value="true"> <input type="hidden" name="commentsubmit"
+							value="true">
+						<p class="ptn">
+							<button type="submit" name="commentsubmit_btn"
+								id="commentsubmit_btn" value="true" class="pn">
+								<strong>评论</strong>
+							</button>
+						</p>
+					</form>
+				</div>
+			</div>
+			<div id="diycontentcomment" class="area"></div>
+
+
+		</div>
+		<div class="sd pph">
+
+
+			<div class="sd_btn bp">
+				<a href="http://iuni.zsCat.com/plugin.php?id=dsu_paulsign:sign"
+					target="_blank" class="signin">马上签到</a>
+			</div>
+
+			<div class="drag">
+				<div id="diyrighttop" class="area"></div>
+			</div>
+
+			<div class="bp colu">
+				<div class="blocktitle title">
+					<span class="titletext">相关分类</span>
+				</div>
+				<div class="dxb_bc" style="padding-bottom: 20px;">
+					<ul class="module cl xl xl2 cl">
+						<li><a
+							href="${ctxPath!}/cms/newsList/${article.categoryId!}">新闻资讯</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="hot_post bp">
+				<div id="diy12" class="area">
+					<div id="frameqkPF4V"
+						class="cl_frame_bm frame move-span cl frame-1">
+						<div id="frameqkPF4V_left" class="column frame-1-c">
+							<div id="frameqkPF4V_left_temp" class="move-span temp"></div>
+							<div id="portal_block_22" class="cl_block_bm block move-span">
+								<div class="blocktitle title">
+									<span
+										style="float:; margin-left: px; font-size:; color: !important;"
+										class="titletext">热帖推荐</span>
+								</div>
+								<div id="portal_block_22_content" class="dxb_bc">
+									<div class="module cl xl xl1">
+										<ul>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5402"
+												title="测试" target="_blank">测试</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=2"
+												title="优质内容不埋没！让你完美逆袭，冲上社区首页" target="_blank">优质内容不埋没！让你完美逆袭，冲上社区首</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=14"
+												title="不仅仅是颜值高，乔威便携式蓝牙音箱体验" target="_blank">不仅仅是颜值高，乔威便携式蓝牙音箱体验</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5283"
+												title="zsCat创想APP制作服务上线啦！" target="_blank">zsCat创想APP制作服务上线啦！</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=15"
+												title="有了这些软件，你的小米电视才是真正的智能电视" target="_blank">有了这些软件，你的小米电视才是真正的智能</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=6"
+												title="巧用小米手机连拍功能拍飞溅的水花" target="_blank">巧用小米手机连拍功能拍飞溅的水花</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5401"
+												title="1" target="_blank">1</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5400"
+												title="成了农村一道独特的风景。" target="_blank">成了农村一道独特的风景。</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5213"
+												title="邀你一起骑往《指环王》拍摄地 - 探索真实的中土世界[新西兰]" target="_blank">邀你一起骑往《指环王》拍摄地
+													- 探索真实</a></li>
+											<li><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5399"
+												title="要射了，接到" target="_blank">要射了，接到</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hot_act bp">
+				<div id="diy10" class="area">
+					<div id="framevBXLUX"
+						class="cl_frame_bm frame move-span cl frame-1">
+						<div id="framevBXLUX_left" class="column frame-1-c">
+							<div id="framevBXLUX_left_temp" class="move-span temp"></div>
+							<div id="portal_block_21" class="cl_block_bm block move-span">
+								<div class="blocktitle title">
+									<span
+										style="float:; margin-left: px; font-size:; color: !important;"
+										class="titletext">热门活动</span>
+								</div>
+								<div id="portal_block_21_content" class="dxb_bc">
+									<div class="module cl ml">
+										<ul>
+											<li style="width: 250px;"><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5402"
+												target="_blank"><img
+													src="${ctxPath!}/static/bbs/img/e7d1949b2ca42d7516401ec74fb98be6.jpg"
+													width="250" height="120" alt="测试"></a>
+												<div class="act_item">
+													<a
+														href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=5402"
+														title="测试" target="_blank">参与</a>
+													<h3>测试</h3>
+													<p>
+														<i>4</i> 人已关注
+													</p>
+												</div></li>
+											<li style="width: 250px;"><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=2"
+												target="_blank"><img
+													src="${ctxPath!}/static/bbs/img/f2c35cece304af268372aae84f94a42d.jpg"
+													width="250" height="120" alt="优质内容不埋没！让你完美逆袭，冲上社区首页"></a>
+												<div class="act_item">
+													<a
+														href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=2"
+														title="优质内容不埋没！让你完美逆袭，冲上社区首页" target="_blank">参与</a>
+													<h3>优质内容不埋没！让你完美逆袭，冲上社区首</h3>
+													<p>
+														<i>2288</i> 人已关注
+													</p>
+												</div></li>
+											<li style="width: 250px;"><a
+												href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=14"
+												target="_blank"><img
+													src="${ctxPath!}/static/bbs/img/5a0fff95ee6085e19c5add4f6557995d.jpg"
+													width="250" height="120" alt="不仅仅是颜值高，乔威便携式蓝牙音箱体验"></a>
+												<div class="act_item">
+													<a
+														href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=14"
+														title="不仅仅是颜值高，乔威便携式蓝牙音箱体验" target="_blank">参与</a>
+													<h3>不仅仅是颜值高，乔威便携式蓝牙音箱体验</h3>
+													<p>
+														<i>1254</i> 人已关注
+													</p>
+												</div></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about bp">
+				<div id="diy5" class="area">
+					<div id="frameR418gh"
+						class="cl_frame_bm frame move-span cl frame-1">
+						<div id="frameR418gh_left" class="column frame-1-c">
+							<div id="frameR418gh_left_temp" class="move-span temp"></div>
+							<div id="portal_block_20" class="cl_block_bm block move-span">
+								<div class="blocktitle title">
+									<span
+										style="float:; margin-left: px; font-size:; color: !important;"
+										class="titletext">关注我们</span>
+								</div>
+								<div id="portal_block_20_content" class="dxb_bc">
+									<div class="portal_block_summary">
+										<ul class="sns">
+											<li class="weibo"><a href="http://www.weibo.com/"
+												target="_blank"><span></span>新浪微博</a></li>
+											<li class="qq"><a
+												href="http://wpa.qq.com/msgrd?v=3&uin=951449465&site=qq&menu=yes"
+												target="_blank"><span></span>在线客服</a></li>
+											<li class="tqq"><a href="http://t.qq.com/"
+												target="_blank"><span></span>腾讯微博</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="drag">
+				<div id="diy2" class="area"></div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<div class="wp mtn">
+		<div id="diy3" class="area"></div>
+	</div>
+	<input type="hidden" id="portalview" value="1">
+</div>
+
+
+<div id="ft">
+	<div class="wp cl">
+		<div id="flk" class="y">
+			<p>
+				<a
+					href="http://wpa.qq.com/msgrd?V=3&Uin=951449465&Site=%D0%C2%C8%F1%B4%B4%CF%EB%C7%E1%D6%F7%CC%E2%C4%A3%B0%E5&Menu=yes&from=discuz"
+					target="_blank" title="QQ"><img
+					src="${ctxPath!}/static/bbs/img/site_qq.jpg" alt="QQ"></a><span
+					class="pipe">|</span><a href="http://iuni.zsCat.com/archiver/">Archiver</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/forum.php?mobile=yes">手机版</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/forum.php?mod=misc&action=showdarkroom">小黑屋</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/%E6%96%B0%E9%94%90%E5%88%9B%E6%83%B3%E8%BD%BB%E4%B8%BB%E9%A2%98%E7%A4%BE%E5%8C%BA"
+					target="_blank">zsCat创想轻主题模板</a> ( <a
+					href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16073468号-1</a>
+				)&nbsp;<a href="http://discuz.qq.com/service/security"
+					target="_blank" title="防水墙保卫网站远离侵害"><img
+					src="${ctxPath!}/static/bbs/img/security.png"></a>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260287839'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260287839%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+				<span id="cnzz_stat_icon_1260287839"><a
+					href="http://www.cnzz.com/stat/website.php?web_id=1260287839"
+					target="_blank" title="站长统计"><img border="0" hspace="0"
+						vspace="0" src="${ctxPath!}/static/bbs/img/pic.gif"></a></span>
+				<script src="${ctxPath!}/static/bbs/img/stat.php"
+					type="text/javascript"></script>
+				<script src="${ctxPath!}/static/bbs/img/core.php" charset="utf-8"
+					type="text/javascript"></script>
+			</p>
+			<p class="xs0">
+				GMT+8, 2016-10-18 09:26<span id="debuginfo"> , Processed in
+					0.049003 second(s), 25 queries . </span>
+			</p>
+		</div>
+		<div id="frt">
+			<p>
+				Powered by <a href="http://www.zscat.top/index" target="_blank">zsCat</a>
+				<em>X3.2</em>
+			</p>
+			<p class="xs0">
+				&#169; 2001-2013 <a href="http://shop.zscat.top/index.htm" target="_blank">zsCat商城
+					Inc.</a>
+			</p>
+		</div>
+	</div>
+</div>
+<div id="scrolltop">
+	<span hidefocus="true"><a title="返回顶部" class="scrolltopa"><b>返回顶部</b></a></span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+<div id="discuz_tips" style="display: none;"></div>
+<script type="text/javascript">
+				var tipsinfo = '49852173|X3.2|0.6||0||0|7|1476753975|9de7419e170a110b216ed24307182d80|2';
+			</script>
+<script src="${ctxPath!}/static/bbs/js/discuz_tips.js"
+	type="text/javascript" charset="UTF-8"></script>
+
+</body>
+@layout("/cms/layout/cmsFooter.html"){}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd 
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd"
+	default-lazy-init="false">
+	
+    <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	        <property name="locations">
+	            <list>
+	                <value>classpath:/config/properties/app.properties</value>
+	           
+	            </list>
+	        </property>
+	    </bean>
+	
+	    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+	        <property name="properties" ref="configProperties" />
+	    </bean>
+
+	<bean class="com.rt.shop.common.tools.spring.SpringContextUtil"></bean>
+
+	<!-- 扫描的包路径 去掉mvc的注解 -->
+	<context:component-scan base-package="com.rt.shop">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+	<!-- 启用aop注解 -->
+	<aop:aspectj-autoproxy expose-proxy="true"/>
+	
+	 <!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
+	<bean id="velocityCongfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath">
+			<value>/</value>
+		</property>
+		<property name="velocityProperties">
+			<props>
+				<prop key="input.encoding">UTF-8</prop>
+				<prop key="output.encoding ">UTF-8</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.velocity.VelocityView" />
+		<property name="contentType">
+			<value>text/html;charset=UTF-8</value>
+		</property>
+	</bean>
+	
+	<!--配置velocity engine默认路径-->
+	<bean id="velocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="resourceLoaderPath" value="/velocity/"></property>
+	</bean>
+	 
+	   <import resource="classpath*:/config/spring/spring-config-datasource.xml" /> 
+	  
+	  <import resource="classpath*:/config/spring/spring-config-mybatis.xml" /> 
+	 <import resource="classpath*:/config/spring/spring-config-tx.xml" />  
+	  
+	 
+    <!-- <import resource="classpath*:/config/shiro/spring-config-shiro.xml" /> --> 
+    
+    
+</beans>

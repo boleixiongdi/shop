@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.UserMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, MSN, QQ, WW, address, availableBalance, birthday, email, freezeBlance, gold, integral, lastLoginDate, lastLoginIp, loginCount, loginDate, loginIp, mobile, password, report, sex, status, telephone, trueName, userName, userRole, user_credit, photo_id, store_id, qq_openid, qq_binded, sina_openid, sina_binded, tianyuan_openid, tianyuan_binded, store_quick_menu, parent_id, years, area_id
+	</sql>
+	<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+	<!-- 添加用户选择的角色 -->
+	<insert id="insertBatchUserRole" parameterType="java.util.List">
+		insert into shopping_user_role (user_id,role_Id) values 
+		 <foreach collection="list" item="item" index="index"
+            separator=",">
+            (#{item.user_id},
+            #{item.role_id} )
+        </foreach>
+	</insert>
+</mapper>

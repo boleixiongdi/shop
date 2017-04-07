@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.GroupGoodsMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, gg_audit_time, gg_content, gg_count, gg_def_count, gg_group_count, gg_max_count, gg_min_count, gg_name, gg_price, gg_rebate, gg_recommend, gg_recommend_time, gg_status, gg_vir_count, gg_ga_id, gg_gc_id, gg_goods_id, gg_img_id, group_id, weixin_shop_recommend, weixin_shop_recommendTime
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

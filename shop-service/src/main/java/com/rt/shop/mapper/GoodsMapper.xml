@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.GoodsMapper">
+ <cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, goods_click, goods_details, goods_fee, goods_inventory, goods_inventory_detail, goods_name, goods_price, goods_property, goods_recommend, goods_salenum, goods_seller_time, goods_serial, goods_status, goods_transfee, goods_weight, inventory_type, seo_description, seo_keywords, store_price, store_recommend, store_recommend_time, ztc_admin_content, ztc_apply_time, ztc_begin_time, ztc_click_num, ztc_dredge_price, ztc_gold, ztc_pay_status, ztc_price, ztc_status, gc_id, goods_brand_id, goods_main_photo_id, goods_store_id, ztc_admin_id, goods_collect, group_buy, goods_choice_type, group_id, activity_status, bargain_status, delivery_status, goods_current_price, goods_volume, ems_trans_fee, express_trans_fee, mail_trans_fee, transport_id, combin_status, combin_begin_time, combin_end_time, combin_price, description_evaluate, weixin_shop_hot, weixin_shop_hotTime, weixin_shop_recommend, weixin_shop_recommendTime
+	</sql>
+
+	<select id="selectGoodsByStoreCartId" resultType="com.rt.shop.entity.Goods">
+			SELECT g.* FROM shopping_goodscart t LEFT JOIN shopping_goods g
+		on t.goods_id=g.id where t.sc_id=#{id}
+	 </select>
+ 
+ 
+</mapper>

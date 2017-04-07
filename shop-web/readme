@@ -1,0 +1,16 @@
+ Page pList = this.addressService.selectPage(new Page<Address>(Integer.valueOf(CommUtil.null2Int(currentPage)), 12), null);
+ CommWebUtil.saveIPageList2ModelAndView("", "", "", pList, mv);
+ 
+ 
+ //				User sUser=new User();
+//				sUser.setStore_id(storeService.selectById(order.getStore_id()).getId());
+//				User storeUser=userService.selectOne(sUser);
+				
+				User orderUser=userService.selectById(of.getUser_id());
+				
+				
+				 request = (HttpServletRequest) ((WebSubject)SecurityUtils.getSubject()).getServletRequest(); 
+	   HttpSession httpSession = ((HttpServletRequest)request).getSession();  
+	   String shopping_view_type = CommWebUtil.null2String(httpSession.getAttribute("shopping_view_type"));
+	   
+	   shopping_cart_gsp

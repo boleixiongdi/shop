@@ -1,0 +1,59 @@
+<div class="layer">
+	<form name="FormPost" id="gwInfo-save" class="FormGrid"  method="post"
+		action="${ctxPath}/gwInfo/save">
+		
+		<input type="hidden" value="${gwInfo.id!}" name="id"/>
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+								<tr class="FormData">
+			<td class="CaptionTD">标题</td>
+			<td class="DataTD width-100"><input type="text" name="name" datatype="*"
+			nullmsg="请输入标题！" value="${gwInfo.name!}"></td>
+		</tr>
+		
+		<tr class="FormData">
+					<td class="CaptionTD">是否显示</td>
+					<td class="DataTD">
+						<div class="radio inline">
+							<label>
+								<input name="display" type="radio" class="ace" checked value="1"/>
+								<span class="lbl"> 显示 </span>
+							</label>
+						</div>
+						<div class="radio inline">
+							<label>
+								<input name="display" type="radio" class="ace" value="0"/>
+								<span class="lbl"> 隐藏</span>
+							</label>
+						</div>
+					</td>
+				</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">内容</td>
+			<td class="DataTD width-100"><input type="text" name="content" datatype="*"
+			nullmsg="请输入内容！" value="${gwInfo.content!}"></td>
+		</tr>
+		
+
+				<!-- <tr class="FormData">
+					<td class="CaptionTD">描述</td>
+					<td class="DataTD">
+						<textarea name="description" class="autosize-transition form-control "
+						style="resize: none;">${gwInfo.description!}</textarea>	
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+	</form>
+</div>
+<#save formId="gwInfo-save" />
+
+<script type="text/javascript">
+
+//描述框自动扩张高度
+$('textarea[class*=autosize]').autosize({append: "\n"});
+
+</script>

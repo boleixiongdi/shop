@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.IntegralGoodsMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, ig_begin_time, ig_click_count, ig_content, ig_end_time, ig_exchange_count, ig_goods_count, ig_goods_integral, ig_goods_name, ig_goods_price, ig_goods_sn, ig_goods_tag, ig_limit_count, ig_limit_type, ig_recommend, ig_seo_description, ig_seo_keywords, ig_sequence, ig_show, ig_time_type, ig_transfee, ig_transfee_type, ig_goods_img_id
+	</sql>
+<cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+</mapper>

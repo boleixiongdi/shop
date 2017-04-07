@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rt.shop.mapper.GoodsFloorMapper">
+ <cache eviction="LRU" type="com.rt.shop.common.redis.LoggingRedisCache"/>
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, addTime, deleteStatus, gf_css, gf_display, gf_goods_count, gf_level, gf_name, gf_sequence, parent_id, gf_gc_goods, gf_gc_list, gf_left_adv, gf_list_goods, gf_right_adv, gf_brand_list
+	</sql>
+
+</mapper>

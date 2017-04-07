@@ -1,0 +1,928 @@
+<!-- 头部 -->
+@layout("/cms/layout/cmsHeader.html"){}
+<ul class="p_pop h_pop" id="plugin_menu" style="display: none">
+	<li><a
+		href="http://iuni.zsCat.com/plugin.php?id=dsu_paulsign:sign"
+		id="mn_plink_sign">每日签到</a></li>
+</ul>
+<ul class="p_pop h_pop" id="mn_N6e26_menu" style="display: none">
+	<li><a href="http://iuni.zsCat.com/portal.php?mod=list&catid=1"
+		hidefocus="true">资讯列表页</a></li>
+	<li><a href="http://iuni.zsCat.com/portal.php?mod=view&aid=7"
+		hidefocus="true">资讯内容页</a></li>
+</ul>
+<ul class="p_pop h_pop" id="mn_forum_menu"
+	style="position: absolute; z-index: 301; left: 438.5px; top: 121px;"
+	initialized="true" ctrlid="mn_forum" ctrlclass="hover">
+	<li><a
+		href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2"
+		hidefocus="true" class=" hidefocus hidefocus hidefocus">帖子列表页</a></li>
+	<li><a
+		href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=1&extra=page%3D1"
+		hidefocus="true">帖子内容页</a></li>
+</ul>
+<div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div>
+<div id="scbar" class="cl y">
+	<form id="scbar_form" method="post" autocomplete="off"
+		action="http://iuni.zsCat.com/search.php?searchsubmit=yes"
+		target="_blank">
+		<input type="hidden" name="mod" id="scbar_mod" value="forum">
+		<input type="hidden" name="formhash" value="8c788e32"> <input
+			type="hidden" name="srchtype" value="title"> <input
+			type="hidden" name="srhfid" value="2"> <input type="hidden"
+			name="srhlocality" value="forum::forumdisplay">
+		<ul>
+			<li class="scbar_type"><a href="javascript:;" id="scbar_type"
+				hidefocus="true">帖子</a></li>
+			<li class="scbar_txt"><input type="text" name="srchtxt"
+				id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech=""
+				speech="" class=" xg1" placeholder="请输入搜索内容"></li>
+			<li class="scbar_btn"><button type="submit" name="searchsubmit"
+					id="scbar_btn" sc="1" value="true">
+					<strong class="xi2">搜索</strong>
+				</button></li>
+		</ul>
+	</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;">
+	<li><a href="javascript:;" rel="curforum" fid="2">本版</a></li>
+	<li><a href="javascript:;" rel="article">文章</a></li>
+	<li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li>
+	<li><a href="javascript:;" rel="group">群组</a></li>
+	<li><a href="javascript:;" rel="user">用户</a></li>
+</ul>
+<script type="text/javascript">
+	initSearchmenu('scbar', '');
+</script>
+</div>
+</div>
+
+
+<div id="wp" class="wp">
+	<style id="diy_style" type="text/css">
+#framevDd0GO {
+	border: 0px none !important;
+}
+
+#portal_block_12 {
+	border: 0px none !important;
+}
+
+#frameTK37iY {
+	border: 0px none !important;
+}
+
+#portal_block_13 {
+	border: 0px none !important;
+}
+
+#framex4CKBQ {
+	border: 0px none !important;
+}
+
+#portal_block_14 {
+	border: 0px none !important;
+}
+
+#framem1R36b {
+	border: 0px none !important;
+}
+
+#portal_block_15 {
+	border: #000000 0px none !important;
+}
+
+#frameEcgDls {
+	border: 0px none !important;
+}
+
+#portal_block_16 {
+	border: 0px none !important;
+}
+</style>
+	<div id="diynavtop" class="area"></div>
+	<div id="pt" class="bm cl">
+		<div class="z">
+			<a href="http://iuni.zsCat.com/" class="nvhm" title="首页">zsCat创想轻主题模板</a><em>&#187;</em><a
+				href="http://iuni.zsCat.com/forum.php">论坛</a> <em>&#8250;</em> <a
+				href="http://iuni.zsCat.com/forum.php?gid=1">玩机专区</a><em>&#8250;</em>
+			<a href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2">O粉玩机</a>
+		</div>
+		<span class="y"> <a
+			href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=favorite&type=forum&id=2&handlekey=favoriteforum&formhash=8c788e32"
+			id="a_favorite">收藏本版 <strong class="xi1" id="number_favorite">(<span
+					id="number_favorite_num">9</span>)
+			</strong></a> <span class="pipe">|</span><a
+			href="http://iuni.zsCat.com/forum.php?mod=rss&fid=2&auth=0"
+			target="_blank" title="RSS">订阅</a>
+		</span>
+	</div>
+	<div class="wp">
+		<div id="diy1" class="area"></div>
+	</div>
+	<div class="boardnav">
+		<div id="ct" class="xr_list wp cl ct2">
+
+			<div class="mn">
+				<div class="bp">
+					<div class="listTit cl">
+						<h1 class="z">O粉玩机</h1>
+						<div class="xr_stat z">
+							今日: <span>0</span><span class="pipe">|</span>主题: <span>52</span><span
+								class="pipe">|</span>排名: <span title="上次排名:2">1</span>
+						</div>
+					</div>
+					<div class="cl mtm">
+
+						<div id="forum_rules_2" style="">
+							<div class="ptn xg2">zsCat创想玩机技巧频道提供最全面的安卓手机系统使用技巧,主要包括:安卓手机系统应用、省电技巧、软件教程、性能优化、硬件周边、创意市集。</div>
+						</div>
+					</div>
+					<ul id="thread_types" class="ttp cl cttp" style="height: auto;">
+						<li class="fold">收起</li>
+						<li id="ttp_all" class="a"><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2">全部
+								<span class="num">52</span>
+						</a></li>
+						@for(item in cateList.list){
+						<li><a
+							href="${ctxPath!}/cms/forumList/${item.id!}"><font
+								color="#f00">${item.name!}</font><span class="num">36</span></a>
+						</li>
+						@}
+					</ul>
+					<script type="text/javascript">
+						showTypes('thread_types');
+					</script>
+
+				</div>
+
+
+
+				<div class="drag">
+					<div id="diy12" class="area"></div>
+				</div>
+
+
+
+
+				<div id="threadlist" class="xr_tl bp">
+					<div class="th">
+						<table cellspacing="0" cellpadding="0">
+							<tbody>
+								<tr>
+									<th colspan="2">
+										<div class="tf">
+											<a id="filter_special" href="javascript:;"
+												class="allpost_ico xi2"> <span class="showmenu">全部主题</span>
+											</a> <a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=lastpost&orderby=lastpost"
+												class="lastpost_ico xi2"> 最新 </a> <a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=hot"
+												class="hotpost_ico xi2"> 热帖 </a> <a
+												href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=digest&digest=1"
+												class="digestpost_ico xi2"> 精华 </a> <a id="filter_dateline"
+												href="javascript:;" class="showmenu xi2">更多</a> <span
+												id="clearstickthread" style="display: none;"> <span
+												class="pipe">|</span> <a href="javascript:;" class="xi2"
+												title="显示置顶">显示置顶</a>
+											</span>
+
+										</div>
+									</th>
+									<td class="by"><span id="atarget" class="y"
+										title="在新窗口中打开帖子">新窗</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tl">
+						<script type="text/javascript">
+							var lasttime = 1476620532;
+							var listcolspan = '5';
+						</script>
+						<div id="forumnew" style="display: none"></div>
+						<form method="post" autocomplete="off" name="moderate"
+							id="moderate"
+							action="http://iuni.zsCat.com/forum.php?mod=topicadmin&action=moderate&fid=2&infloat=yes&nopost=yes">
+							<input type="hidden" name="formhash" value="8c788e32"> <input
+								type="hidden" name="listextra" value="page%3D1">
+							<table summary="forum_2" cellspacing="0" cellpadding="0"
+								id="threadlisttableid">
+								@for(item in cateList.list){
+								<tbody id="stickthread_5283">
+									<tr>
+										<td class="h_avatar"><a
+											href="${ctxPath!}/cms/forumDetail/${item.id!}"><img
+												src="${ctxPath!}/${item.image!}"></a></td>
+										<th class="common">
+											<div class="tl_tit cl">
+												<span class="views y"> 4155</span> <span class="y"
+													style="margin-top: 4px; width: 80px;"> <a
+													href="javascript:;" id="content_5283" class="showcontent y"
+													title="更多操作"></a> <a href="javascript:void(0);"
+													class="showhide y" title="隐藏置顶帖">隐藏置顶帖</a> <a
+													class="tdpre y" href="javascript:void(0);">预览</a>
+												</span>
+												<h3>
+													<img class="zd" src="${ctxPath!}/static/bbs/img/pin_3.gif"
+														alt="全局置顶"> <em>[<a
+														href="${ctxPath!}/cms/forumList/${item.cmsCategory.id!}"><font
+															color="#f00">${item.cmsCategory.name!}</font></a>]
+													</em> <a
+														href="${ctxPath!}/cms/forumDetail/${item.id!}"
+														style="font-weight: bold; color: #2897C5;" class="xst">${item.title!}</a>
+													<img src="${ctxPath!}/static/bbs/img/011.small.gif"
+														alt="新人帖" align="absmiddle"> <img
+														src="${ctxPath!}/static/bbs/img/image_s.gif"
+														alt="attach_img" title="图片附件" align="absmiddle"> <img
+														src="${ctxPath!}/static/bbs/img/digest_3.gif"
+														align="absmiddle" alt="digest" title="精华 3"> <span
+														class="tps">&nbsp;...<a
+														href="${ctxPath!}/cms/forumDetail/${item.id!}">2</a></span>
+												</h3>
+
+											</div>
+											<div class="tl_txt cl">
+												<span class="replies y">16</span>
+												<p class="publisher">
+													<a href="http://iuni.zsCat.com/home.php?mod=space&uid=1"
+														c="1">admin</a> 于 <span>2016-4-15</span> 发布
+												</p>
+
+												<p class="replyer">
+													<a
+														href="http://iuni.zsCat.com/home.php?mod=space&username=%BF%F1%C7%E9%D2%EC%C4%A7"
+														c="1">狂情异魔</a> 最后回复 <a
+														href="http://iuni.zsCat.com/forum.php?mod=redirect&tid=5283&goto=lastpost#lastpost"><span
+														title="2016-10-16 17:01">3&nbsp;小时前</span></a>
+												</p>
+
+											</div>
+										</th>
+										<td class="w1"></td>
+										<td class="w1"></td>
+										<td class="w1"></td>
+									</tr>
+								</tbody>
+
+								@}
+
+
+								<tbody id="separatorline">
+									<tr class="ts">
+										<td>&nbsp;</td>
+										<th><a href="javascript:;" title="查看更新"
+											class="forumrefresh">版块主题</a></th>
+										<td class="w1"></td>
+										<td class="w1"></td>
+										<td class="w1"></td>
+									</tr>
+								</tbody>
+								<script type="text/javascript">
+									hideStickThread();
+								</script>
+								@for(item in cateList.list){
+								<tbody id="normalthread_6">
+									<tr>
+										<td class="h_avatar"><a
+											href="${ctxPath!}/cms/forumDetail/${item.id!}"><img
+												src="${ctxPath!}/${item.image!}"></a></td>
+										<th class="common">
+											<div class="tl_tit cl">
+												<span class="views y"> 1631</span> <span class="y"
+													style="margin-top: 4px; width: 80px;"> <a
+													href="javascript:;" id="content_6" class="showcontent y"
+													title="更多操作"></a> <a class="tdpre y"
+													href="javascript:void(0);">预览</a>
+												</span>
+												<h3>
+													<a
+														href="${ctxPath!}/cms/forumDetail/${item.id!}"
+														class="xst">${item.title!}</a> <img
+														src="${ctxPath!}/static/bbs/img/011.small.gif" alt="新人帖"
+														align="absmiddle"> <img
+														src="${ctxPath!}/static/bbs/img/image_s.gif"
+														alt="attach_img" title="图片附件" align="absmiddle"> <img
+														src="${ctxPath!}/static/bbs/img/recommend_1.gif"
+														align="absmiddle" alt="recommend" title="评价指数 4"> <img
+														src="${ctxPath!}/static/bbs/img/hot_3.gif"
+														align="absmiddle" alt="heatlevel" title="热度: 22"> <span
+														class="fromg xg1"> [来自: <a
+														href="${ctxPath!}/cms/forumList/${item.cmsCategory.id!}"
+														target="_blank" class="xg1">${item.cmsCategory.name!}</a>]
+													</span>
+												</h3>
+
+											</div>
+											<div class="tl_txt cl">
+												<span class="replies y">8</span>
+												<p class="publisher">
+													<a href="http://iuni.zsCat.com/home.php?mod=space&uid=3"
+														c="1">梦想的自由</a> 于 <span>2015-8-10</span> 发布
+												</p>
+
+												<p class="replyer">
+													<a
+														href="http://iuni.zsCat.com/home.php?mod=space&username=lixiangimi"
+														c="1">zsCat</a> 最后回复 <a
+														href="http://iuni.zsCat.com/forum.php?mod=redirect&tid=6&goto=lastpost#lastpost"><span
+														title="2016-10-15 11:02">昨天&nbsp;11:02</span></a>
+												</p>
+
+											</div>
+										</th>
+										<td class="w1"></td>
+										<td class="w1"></td>
+										<td class="w1"></td>
+									</tr>
+								</tbody>
+									@}
+								
+							</table>
+						</form>
+					</div>
+					<a class="bm_h" href="javascript:;"
+						rel="forum.php?mod=forumdisplay&amp;fid=2&amp;page=2" curpage="1"
+						id="autopbn" totalpage="7" picstyle="0" forumdefstyle="">下一页
+						&#187;</a>
+					<script src="${ctxPath!}/static/bbs/js/autoloadpage.js"
+						type="text/javascript"></script>
+
+					<div class="bm bw0 pgs cl">
+						<span id="fd_page_bottom"><div class="pg">
+								<strong>1</strong><a
+									href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&page=2">2</a><a
+									href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&page=3">3</a><a
+									href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&page=4">4</a><a
+									href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&page=5">5</a><a
+									href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&page=6">6</a><a
+									href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&page=7">7</a><label><input
+									type="text" name="custompage" class="px" size="2"
+									title="输入页码，按回车快速跳转" value="1"><span title="共 7 页">
+										/ 7 页</span></label><a
+									href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&page=2"
+									class="nxt">下一页</a>
+							</div></span> <span id="visitedforumstmp" class="pgb y"><a
+							href="http://iuni.zsCat.com/forum.php">返&nbsp;回</a></span> <a
+							href="javascript:;" id="newspecialtmp" title="发新帖"><img
+							src="${ctxPath!}/static/bbs/img/pn_post.png" alt="发新帖"></a>
+					</div>
+
+				</div>
+
+				<div id="filter_special_menu" class="p_pop" style="display: none"
+					change="location.href=&#39;forum.php?mod=forumdisplay&amp;fid=2&amp;filter=&#39;+$(&#39;filter_special&#39;).value">
+					<ul>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2">全部主题</a></li>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=specialtype&specialtype=poll">投票</a></li>
+					</ul>
+				</div>
+				<div id="filter_reward_menu" class="p_pop" style="display: none"
+					change="forum.php?mod=forumdisplay&amp;fid=2&amp;filter=specialtype&amp;specialtype=reward&amp;rewardtype=&#39;+$(&#39;filter_reward&#39;).value">
+					<ul>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=specialtype&specialtype=reward">全部悬赏</a></li>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=specialtype&specialtype=reward&rewardtype=1">进行中</a></li>
+					</ul>
+				</div>
+				<div id="filter_dateline_menu" class="p_pop" style="display: none">
+					<ul class="pop_moremenu">
+						<li>排序: <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=author&orderby=dateline">发帖时间</a><span
+							class="pipe">|</span> <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=reply&orderby=replies">回复/查看</a><span
+							class="pipe">|</span> <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=reply&orderby=views">查看</a>
+						</li>
+						<li>时间: <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&orderby=lastpost&filter=dateline"
+							class="xw1">全部时间</a><span class="pipe">|</span> <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&orderby=lastpost&filter=dateline&dateline=86400">一天</a><span
+							class="pipe">|</span> <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&orderby=lastpost&filter=dateline&dateline=172800">两天</a><span
+							class="pipe">|</span> <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&orderby=lastpost&filter=dateline&dateline=604800">一周</a><span
+							class="pipe">|</span> <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&orderby=lastpost&filter=dateline&dateline=2592000">一个月</a><span
+							class="pipe">|</span> <a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&orderby=lastpost&filter=dateline&dateline=7948800">三个月</a>
+						</li>
+					</ul>
+				</div>
+				<div id="filter_orderby_menu" class="p_pop" style="display: none">
+					<ul>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2">默认排序</a></li>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=author&orderby=dateline">发帖时间</a></li>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=reply&orderby=replies">回复/查看</a></li>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=reply&orderby=views">查看</a></li>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=lastpost&orderby=lastpost">最后发表</a></li>
+						<li><a
+							href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2&filter=heat&orderby=heats">热门</a></li>
+					</ul>
+				</div>
+
+				<div id="diyfastposttop" class="area"></div>
+				<script type="text/javascript">
+					var postminchars = parseInt('10');
+					var postmaxchars = parseInt('10000');
+					var disablepostctrl = parseInt('0');
+					var fid = parseInt('2');
+				</script>
+				<div id="f_pst" class="bm">
+					<div class="bm_h">
+						<h2>快速发帖</h2>
+					</div>
+					<div class="bm_c">
+						<form method="post" autocomplete="off" id="fastpostform"
+							action="http://iuni.zsCat.com/forum.php?mod=post&action=newthread&fid=2&topicsubmit=yes&infloat=yes&handlekey=fastnewpost">
+
+							<div id="fastpostreturn" style="margin: -5px 0 5px"></div>
+
+							<div class="pbt cl">
+								<div class="ftid">
+									<select name="typeid" id="typeid_fast" width="80" selecti="0"
+										style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+										<option value="0"></option>
+									</select><a href="javascript:;" id="typeid_fast_ctrl"
+										style="width: 80px" tabindex="1">选择主题分类</a>
+								</div>
+								<script type="text/javascript" reload="1">
+									simulateSelect('typeid_fast');
+								</script>
+								<input type="text" id="subject" name="subject" class="px"
+									value="" tabindex="11" style="width: 25em"> <span>还可输入
+									<strong id="checklen">80</strong> 个字符
+								</span>
+							</div>
+
+							<div class="cl">
+								<div id="fastsmiliesdiv" class="y">
+									<div id="fastsmiliesdiv_data">
+										<div id="fastsmilies"></div>
+									</div>
+								</div>
+								<div class="hasfsl" id="fastposteditor">
+									<div class="tedt">
+										<div class="bar">
+											<span class="y"> <a
+												href="http://iuni.zsCat.com/forum.php?mod=post&action=newthread&fid=2">高级模式</a>
+											</span>
+											<script src="${ctxPath!}/static/bbs/js/seditor.js"
+												type="text/javascript"></script>
+											<div class="fpd">
+												<a href="javascript:;" title="文字加粗" class="fbld">B</a> <a
+													href="javascript:;" title="设置文字颜色" class="fclr"
+													id="fastpostforecolor">Color</a> <a id="fastpostimg"
+													href="javascript:;" title="图片" class="fmg">Image</a> <a
+													id="fastposturl" href="javascript:;" title="添加链接"
+													class="flnk">Link</a> <a id="fastpostquote"
+													href="javascript:;" title="引用" class="fqt">Quote</a> <a
+													id="fastpostcode" href="javascript:;" title="代码"
+													class="fcd">Code</a> <a href="javascript:;" class="fsml"
+													id="fastpostsml">Smilies</a>
+											</div>
+										</div>
+										<div class="area">
+											<div class="pt hm">
+												您需要登录后才可以发帖 <a
+													href="http://iuni.zsCat.com/member.php?mod=logging&action=login"
+													class="xi2">登录</a> | <a
+													href="http://iuni.zsCat.com/member.php?mod=register"
+													class="xi2">立即注册</a> <a
+													href="http://iuni.zsCat.com/connect.php?mod=login&op=init&referer=forum.php%3Fmod%3Dforumdisplay%26fid%3D2&statfrom=login"
+													target="_top" rel="nofollow"><img
+													src="${ctxPath!}/static/bbs/img/qq_login.gif" class="vm"></a>
+
+
+
+												<a href="javascript:;"><img
+													src="${ctxPath!}/static/bbs/img/wechat_login.png"
+													class="vm"></a>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="seccheck_fastpost"></div>
+
+								<input type="hidden" name="formhash" value="8c788e32"> <input
+									type="hidden" name="usesig" value="">
+							</div>
+
+
+							<p class="ptm pnpost">
+								<a
+									href="http://iuni.zsCat.com/home.php?mod=spacecp&ac=credit&op=rule&fid=2"
+									class="y" target="_blank">本版积分规则</a>
+								<button type="submit" name="topicsubmit" id="fastpostsubmit"
+									value="topicsubmit" tabindex="13" class="pn pnc">
+									<strong>发表帖子</strong>
+								</button>
+								<label><input type="checkbox" name="adddynamic"
+									class="pc" value="1" checked="checked">转播给听众</label>
+							</p>
+						</form>
+					</div>
+				</div>
+				<div id="diyforumdisplaybottom" class="area"></div>
+			</div>
+
+			<div class="sd">
+				<div class="sd_btn bp">
+					<a
+						href="http://iuni.zsCat.com/forum.php?mod=post&action=newthread&fid=2"
+						class="post_btn">发表新帖</a> <a
+						href="http://iuni.zsCat.com/plugin.php?id=dsu_paulsign:sign"
+						target="_blank" class="signin">马上签到</a>
+				</div>
+				<div class="colu bp">
+					<div id="diy3" class="area">
+						<div id="framevDd0GO"
+							class="cl_frame_bm frame move-span cl frame-1">
+							<div id="framevDd0GO_left" class="column frame-1-c">
+								<div id="framevDd0GO_left_temp" class="move-span temp"></div>
+								<div id="portal_block_12" class="cl_block_bm block move-span">
+									<div class="blocktitle title">
+										<span
+											style="float:; margin-left: px; font-size:; color: !important;"
+											class="titletext">版块导航</span>
+									</div>
+									<div id="portal_block_12_content" class="dxb_bc">
+										<div class="module cl xl xl2">
+											<ul>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=2"
+													title="O粉玩机" target="_blank">O粉玩机</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=36"
+													title="R7&amp;R7 Plus" target="_blank">R7&amp;R7 Plus</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=37"
+													title="OPPO Find 7" target="_blank">OPPO Find 7</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=38"
+													title="OPPO R1C" target="_blank">OPPO R1C</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=39"
+													title="OPPO N3" target="_blank">OPPO N3</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=40"
+													title="更多产品" target="_blank">更多产品</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=42"
+													title="OPPO资讯" target="_blank">OPPO资讯</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=43"
+													title="O粉汇" target="_blank">O粉汇</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=44"
+													title="OPPO校园" target="_blank">OPPO校园</a></li>
+												<li><a
+													href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=46"
+													title="图片瀑布流" target="_blank">图片瀑布流</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hot_act bp">
+					<div id="diy10" class="area">
+						<div id="frameEcgDls"
+							class="cl_frame_bm frame move-span cl frame-1">
+							<div id="frameEcgDls_left" class="column frame-1-c">
+								<div id="frameEcgDls_left_temp" class="move-span temp"></div>
+								<div id="portal_block_16" class="cl_block_bm block move-span">
+									<div class="blocktitle title">
+										<span
+											style="float:; margin-left: px; font-size:; color: !important;"
+											class="titletext">热门活动</span>
+									</div>
+									<div id="portal_block_16_content" class="dxb_bc">
+										<div class="module cl ml">
+											<ul>
+												<li style="width: 250px;"><a
+													href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=1"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/37cc495909ea674c0bcb2ea2870c7aa1.jpg"
+														width="250" height="120" alt="魅蓝2开箱直播（附闲置的M码，魅蓝M码，魅"></a>
+													<div class="act_item">
+														<a
+															href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=1"
+															title="魅蓝2开箱直播（附闲置的M码，魅蓝M码，魅" target="_blank">参与</a>
+														<h3>魅蓝2开箱直播（附闲置的M码，魅蓝M码，魅</h3>
+														<p>
+															<i>6</i> 人已关注
+														</p>
+													</div></li>
+												<li style="width: 250px;"><a
+													href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=2"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/f2c35cece304af268372aae84f94a42d.jpg"
+														width="250" height="120" alt="优质内容不埋没！让你完美逆袭，冲上社区首"></a>
+													<div class="act_item">
+														<a
+															href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=2"
+															title="优质内容不埋没！让你完美逆袭，冲上社区首" target="_blank">参与</a>
+														<h3>优质内容不埋没！让你完美逆袭，冲上社区首</h3>
+														<p>
+															<i>7</i> 人已关注
+														</p>
+													</div></li>
+												<li style="width: 250px;"><a
+													href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=3"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/546e0d8fc4c56655620936a7c6c7d871.jpg"
+														width="250" height="120" alt="延长电池寿命，校准电池！电池修复专业版无"></a>
+													<div class="act_item">
+														<a
+															href="http://iuni.zsCat.com/forum.php?mod=viewthread&tid=3"
+															title="延长电池寿命，校准电池！电池修复专业版无" target="_blank">参与</a>
+														<h3>延长电池寿命，校准电池！电池修复专业版无</h3>
+														<p>
+															<i>4</i> 人已关注
+														</p>
+													</div></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weibo bp" style="display: none;">
+					<div id="diy8" class="area">
+						<div id="framem1R36b"
+							class="cl_frame_bm frame move-span cl frame-1">
+							<div id="framem1R36b_left" class="column frame-1-c">
+								<div id="framem1R36b_left_temp" class="move-span temp"></div>
+								<div id="portal_block_15" class="cl_block_bm block move-span">
+									<div id="portal_block_15_content" class="dxb_bc">
+										<div class="portal_block_summary">
+											<iframe width="100%" height="500" class="share_self"
+												frameborder="0" scrolling="no"
+												src="${ctxPath!}/static/bbs/img/index.htm"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fans bp">
+					<div id="diy4" class="area">
+						<div id="frameTK37iY"
+							class="cl_frame_bm frame move-span cl frame-1">
+							<div id="frameTK37iY_left" class="column frame-1-c">
+								<div id="frameTK37iY_left_temp" class="move-span temp"></div>
+								<div id="portal_block_13" class="cl_block_bm block move-span">
+									<div class="blocktitle title">
+										<span
+											style="float:; margin-left: px; font-size:; color: !important;"
+											class="titletext">热心居民</span>
+									</div>
+									<div id="portal_block_13_content" class="dxb_bc">
+										<div class="module cl ml mlm">
+											<ul>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=4" c="1"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(12).php"
+														width="100" height="100" alt="xinrui"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=4"
+															title="xinrui" target="_blank">xinrui</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=1" c="1"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(13).php"
+														width="100" height="100" alt="admin"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=1"
+															title="admin" target="_blank">admin</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=586"
+													c="1" target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(14).php"
+														width="100" height="100" alt="yong8097"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=586"
+															title="yong8097" target="_blank">yong8097</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=2" c="1"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(15).php"
+														width="100" height="100" alt="zsCat"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=2"
+															title="zsCat" target="_blank">zsCat</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=435"
+													c="1" target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(16).php"
+														width="100" height="100" alt="k2139345"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=435"
+															title="k2139345" target="_blank">k2139345</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=5" c="1"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(17).php"
+														width="100" height="100" alt="冰玑子"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=5"
+															title="冰玑子" target="_blank">冰玑子</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=3" c="1"
+													target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(18).php"
+														width="100" height="100" alt="梦想的自由"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=3"
+															title="梦想的自由" target="_blank">梦想的自由</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=598"
+													c="1" target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(19).php"
+														width="100" height="100" alt="aaa27612"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=598"
+															title="aaa27612" target="_blank">aaa27612</a>
+													</p></li>
+												<li><a
+													href="http://iuni.zsCat.com/home.php?mod=space&uid=471"
+													c="1" target="_blank"><img
+														src="${ctxPath!}/static/bbs/img/avatar(20).php"
+														width="100" height="100" alt="hxr009"></a>
+													<p>
+														<a href="http://iuni.zsCat.com/home.php?mod=space&uid=471"
+															title="hxr009" target="_blank">hxr009</a>
+													</p></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about bp">
+					<div id="diy5" class="area">
+						<div id="framex4CKBQ"
+							class="cl_frame_bm frame move-span cl frame-1">
+							<div id="framex4CKBQ_left" class="column frame-1-c">
+								<div id="framex4CKBQ_left_temp" class="move-span temp"></div>
+								<div id="portal_block_14" class="cl_block_bm block move-span">
+									<div class="blocktitle title">
+										<span
+											style="float:; margin-left: px; font-size:; color: !important;"
+											class="titletext">关注我们</span>
+									</div>
+									<div id="portal_block_14_content" class="dxb_bc">
+										<div class="portal_block_summary">
+											<ul class="sns">
+												<li class="weibo"><a href="http://www.weibo.com/"
+													target="_blank"><span></span>新浪微博</a></li>
+												<li class="qq"><a
+													href="http://wpa.qq.com/msgrd?v=3&uin=951449465&site=qq&menu=yes"
+													target="_blank"><span></span>在线客服</a></li>
+												<li class="tqq"><a href="http://t.qq.com/"
+													target="_blank"><span></span>腾讯微博</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mbm">
+					<div id="diy6" class="area"></div>
+				</div>
+				<div class="mbm">
+					<div id="diy7" class="area"></div>
+				</div>
+				<div class="drag">
+					<div id="diy2" class="area"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="visitedforums_menu" class="p_pop blk cl"
+		style="display: none;">
+		<table cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td id="v_forums">
+						<h3 class="mbn pbn bbda xg1">浏览过的版块</h3>
+						<ul class="xl xl1">
+							<li><a
+								href="http://iuni.zsCat.com/forum.php?mod=forumdisplay&fid=46">图片瀑布流</a></li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript">document.onkeyup = function(e){keyPageScroll(e, 0, 1, 'forum.php?mod=forumdisplay&fid=2&filter=&orderby=lastpost&', 1);}</script>
+	<script type="text/javascript">checkForumnew_handle = setTimeout(function () {checkForumnew(2, lasttime);}, checkForumtimeout);</script>
+	<div class="wp mtn">
+		<div id="diy11" class="area"></div>
+	</div>
+	<script>fixed_top_nv();</script>
+</div>
+
+
+<div id="ft">
+	<div class="wp cl">
+		<div id="flk" class="y">
+			<p>
+				<a
+					href="http://wpa.qq.com/msgrd?V=3&Uin=951449465&Site=%D0%C2%C8%F1%B4%B4%CF%EB%C7%E1%D6%F7%CC%E2%C4%A3%B0%E5&Menu=yes&from=discuz"
+					target="_blank" title="QQ"><img
+					src="${ctxPath!}/static/bbs/img/site_qq.jpg" alt="QQ"></a><span
+					class="pipe">|</span><a href="http://iuni.zsCat.com/archiver/">Archiver</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/forum.php?mobile=yes">手机版</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/forum.php?mod=misc&action=showdarkroom">小黑屋</a><span
+					class="pipe">|</span><a
+					href="http://iuni.zsCat.com/%E6%96%B0%E9%94%90%E5%88%9B%E6%83%B3%E8%BD%BB%E4%B8%BB%E9%A2%98%E7%A4%BE%E5%8C%BA"
+					target="_blank">zsCat创想轻主题模板</a> ( <a
+					href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16073468号-1</a>
+				)&nbsp;<a href="http://discuz.qq.com/service/security"
+					target="_blank" title="防水墙保卫网站远离侵害"><img
+					src="${ctxPath!}/static/bbs/img/security.png"></a>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260287839'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260287839%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+				<span id="cnzz_stat_icon_1260287839"><a
+					href="http://www.cnzz.com/stat/website.php?web_id=1260287839"
+					target="_blank" title="站长统计"><img border="0" hspace="0"
+						vspace="0" src="${ctxPath!}/static/bbs/img/pic.gif"></a></span>
+				<script src="${ctxPath!}/static/bbs/img/stat.php"
+					type="text/javascript"></script>
+				<script src="${ctxPath!}/static/bbs/img/core.php" charset="utf-8"
+					type="text/javascript"></script>
+			</p>
+			<p class="xs0">
+				GMT+8, 2016-10-16 20:22<span id="debuginfo"> , Processed in
+					0.069075 second(s), 26 queries . </span>
+			</p>
+		</div>
+		<div id="frt">
+			<p>
+				Powered by <a href="http://www.zscat.top/index" target="_blank">zsCat</a>
+				<em>X3.2</em>
+			</p>
+			<p class="xs0">
+				&#169; 2001-2013 <a href="http://shop.zscat.top/index.htm" target="_blank">zsCat商城
+					Inc.</a>
+			</p>
+		</div>
+	</div>
+</div>
+<div id="scrolltop">
+	<span hidefocus="true"><a title="返回顶部" class="scrolltopa"><b>返回顶部</b></a></span>
+	<span> <a href="http://iuni.zsCat.com/forum.php"
+		hidefocus="true" class="returnboard" title="返回版块"><b>返回版块</b></a>
+	</span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+<div id="discuz_tips" style="display: none;"></div>
+<script type="text/javascript">
+				var tipsinfo = '49852173|X3.2|0.6||0||0|7|1476620532|e7d7bc6e0dc6c45ea1300d7498a99b08|2';
+			</script>
+<script src="${ctxPath!}/static/bbs/js/discuz_tips.js"
+	type="text/javascript" charset="UTF-8"></script>
+
+</body>
+</html>

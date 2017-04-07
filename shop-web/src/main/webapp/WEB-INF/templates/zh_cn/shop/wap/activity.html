@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-wap-web-app-capable" content="yes">
+    <meta name="apple-wap-web-app-status-bar-style" content="black-translucent">
+    <link href="$!webPath/resources/style/system/front/wap/css/style.css" rel="stylesheet" type="text/css">
+    <script src="$!webPath/resources/style/system/front/wap/js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+
+<div class="phone_hd">
+    <a class="back" href="javascript:history.go(-1);"><img src="$!webPath/resources/style/system/front/wap/images/back.png" width="25" height="25"></a>
+    活动详情
+    <a class="menu home" href="$!webPath/wap/index.htm"><img src="$!webPath/resources/style/system/front/wap/images/home.png" width="25" height="25"></a>
+</div>
+
+
+
+<div class="phone_main">
+    <div class="mt50"></div>
+
+<div>
+    <img src="$!imageWebServer/$!act.ac_acc.path/$!act.ac_acc.name" alt="">
+</div>
+
+    <!--活动商品-->
+    <div class="phone_floor">
+        <h1>
+            <span class="fl">活动商品</span>
+        </h1>
+        <div class="recom rh_recom">
+            <div class="ohbox">
+                <ul class="piclist">
+					#foreach($obj in $objs)
+                    <li>
+                        <div>
+                        <a href="$!webPath/goods_$!{obj.ag_goods.id}.htm" class="limit_box">
+                        	#if($!obj.ag_goods.goods_main_photo)
+                            <img src="$!imageWebServer/$!{obj.ag_goods.goods_main_photo.path}/$!{obj.ag_goods.goods_main_photo.name}">
+                            #else
+                            <img src="$!imageWebServer/$!{config.goodsImage.path}/$!{config.goodsImage.name}">
+                            #end
+                        </a>
+                            <!--<span class="re_name recom_re_name">户外徒步越野鞋防泼水...</span>-->
+
+                            <span class="rh_con_tit"><a href="$!goods_url">$!{obj.ag_goods.goods_name}</a></span>
+                            <span class="store_price"><i>￥$!{obj.ag_goods.goods_current_price}</i> <em>$!{obj.ag_goods.goods_salenum}人付款</em></span>
+
+
+
+                        </div>
+                    </li>
+					#end
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+$!httpInclude.include("/footer.htm")
+
+</body>
+</html>

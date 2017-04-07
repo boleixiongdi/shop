@@ -1,0 +1,105 @@
+<div class="layer">
+	<form name="FormPost" id="cmsCategory-save" class="FormGrid"  method="post"
+		action="${ctxPath}/cmsCategory/save">
+	
+		<input type="hidden" value="${pCmsCategory.parentIds!}" name="parentIds" />
+		<input type="hidden" value="${cmsCategory.parentIds!}" name="oldParentIds" />
+		<input type="hidden" value="${cmsCategory.id!}" name="id"/>
+		<table class="EditTable" width="100%">
+			<tbody>
+				<tr style="display: none;">
+					<td class="ui-state-error" id="FormError"></td>
+				</tr>
+		
+		<tr class="FormData">
+					<td class="CaptionTD">上级栏目</td>
+					<td class="DataTD">
+					<#treeselect url="cmsCategory/tree" modelNameValue="${pCmsCategory.name!}" 
+							modelIdValue="${pCmsCategory.id!1}" selectIds="${pCmsCategory.id!}"
+							curId="${cmsCategory.id!}" />
+					</td>
+		</tr>
+				<tr class="FormData">
+			<td class="CaptionTD">名称</td>
+			<td class="DataTD width-100"><input type="text" name="name" datatype="*"
+			nullmsg="请输入名称！" value="${cmsCategory.name!}"></td>
+		</tr>
+		
+		
+		<td class="CaptionTD">区域类型</td>
+					<td class="DataTD width-100">
+					@var areaList = dict.getDictListByType("cms_cate_type");
+					<#select name="module">
+						@for(item in areaList){
+							<option value="${item.value!}" ${decode(item.value,cmsCategory.module!,"selected","")}>
+							${item.label!}
+							</option>
+						@}
+					</#select>
+					</td>
+			</tr>
+		
+		<tr class="FormData">
+			<td class="CaptionTD">关键字</td>
+			<td class="DataTD width-100"><input type="text" name="keywords" datatype="*"
+			nullmsg="请输入关键字！" value="${cmsCategory.keywords!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">级别</td>
+			<td class="DataTD width-100"><input type="text" name="grade" datatype="*"
+			nullmsg="请输入级别！" value="${cmsCategory.grade!}"></td>
+		</tr>
+		
+		<tr class="FormData">
+					<td class="CaptionTD">是否显示</td>
+					<td class="DataTD">
+						<div class="radio inline">
+							<label>
+								<input name="isshow" type="radio" class="ace" checked value="1"/>
+								<span class="lbl"> 显示 </span>
+							</label>
+						</div>
+						<div class="radio inline">
+							<label>
+								<input name="isshow" type="radio" class="ace" value="0"/>
+								<span class="lbl"> 隐藏</span>
+							</label>
+						</div>
+					</td>
+				</tr>
+		
+		<tr class="FormData">
+			<td class="CaptionTD">链接</td>
+			<td class="DataTD width-100"><input type="text" name="url" datatype="*"
+			nullmsg="请输入链接！" value="${cmsCategory.url!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">排序</td>
+			<td class="DataTD width-100"><input type="text" name="orderno" datatype="*"
+			nullmsg="请输入orderno！" value="${cmsCategory.orderno!}"></td>
+		</tr>
+		<tr class="FormData">
+			<td class="CaptionTD">描述</td>
+			<td class="DataTD width-100"><input type="text" name="description" datatype="*"
+			nullmsg="请输入描述！" value="${cmsCategory.description!}"></td>
+		</tr>
+
+				<!-- <tr class="FormData">
+					<td class="CaptionTD">描述</td>
+					<td class="DataTD">
+						<textarea name="description" class="autosize-transition form-control "
+						style="resize: none;">${cmsCategory.description!}</textarea>	
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+	</form>
+</div>
+<#save formId="cmsCategory-save" />
+
+<script type="text/javascript">
+
+//描述框自动扩张高度
+$('textarea[class*=autosize]').autosize({append: "\n"});
+
+</script>
